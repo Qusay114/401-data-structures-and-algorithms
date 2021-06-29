@@ -10,3 +10,10 @@
 # challenge 2 (Array Insert Shift) : 
 
 ![Whiteboard](challenges/array-insert-shift/shiftInsertedArrayWhiteBoard.png)
+
+<br>
+<br>
+
+# challenge 3 (Binary Array Search) :
+
+![Whiteboard](challenges/ArrayBinarySearch/binarySearch.png)
