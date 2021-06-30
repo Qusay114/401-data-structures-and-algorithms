@@ -17,3 +17,11 @@
 # challenge 3 (Binary Array Search) :
 
 ![Whiteboard](challenges/ArrayBinarySearch/binarySearch.png)
+
+
+<br>
+<br>
+
+# challenge 4 (Fibonacci Sequence) :
+
+![Whiteboard](challenges/interviewQuestionFabSeq.png)
