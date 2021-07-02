@@ -14,9 +14,9 @@
 <br>
 <br>
 
-# challenge 3 (Binary Array Search) :
+# [challenge 3 (Binary Array Search)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayBinarySearch-Challenge/src/ArrayBinarySearch.java) :
 
-![Whiteboard](challenges/ArrayBinarySearch/binarySearch.png)
+![Whiteboard](ArrayBinarySearch-Challenge/src/binarySearch.png)
 
 
 <br>
