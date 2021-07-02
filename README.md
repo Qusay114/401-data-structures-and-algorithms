@@ -1,8 +1,8 @@
 # 401-data-structures-and-algorithms
 
-# challenge 1 (Reverse Array) :
+# [challenge 1 (Reverse Array)](https://github.com/Qusay114/401-data-structures-and-algorithms/ArrayReverse-Challenge/src/) :
 
-![Whiteboard](challenges/ReverseArray/reverseArray.png)
+![Whiteboard](ArrayReverse-Challenge/src/reverseArray.png)
 
 <br>
 <br>
