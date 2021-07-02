@@ -1,13 +1,13 @@
 # 401-data-structures-and-algorithms
 
-# [challenge 1 (Reverse Array)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/array-reverse/ArrayReverse-Challenge/src/ArrayReverse.java) :
+# [challenge 1 (Reverse Array)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayReverse-Challenge/src/ArrayReverse.java) :
 
 ![Whiteboard](ArrayReverse-Challenge/src/reverseArray.png)
 
 <br>
 <br>
 
-# [challenge 2 (Array Insert Shift)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/array-insert-shift/ArrayInsertShift-challenge/src/ArrayInsertShift.java) :
+# [challenge 2 (Array Insert Shift)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayInsertShift-challenge/src/ArrayInsertShift.java) :
 
 ![Whiteboard](ArrayInsertShift-challenge/src/shiftInsertedArrayWhiteBoard.png)
 
