@@ -14,13 +14,16 @@ public class App {
         list1.append(1);
         list1.append(2);
         list1.append(3);
-        System.out.println("List1 = "+ list1.toString());
-        LinkedList<Integer> list2 = new LinkedList<Integer>();
-        list2.append(-1);
-        list2.append(-2);
-        list2.append(-3);
-        System.out.println("List2 = "+ list2.toString());
-        System.out.println("ZipedList = "+ zipLists(list1 , list2));
+//        list1.append(4);
+        System.out.println("List1 before reverse = " + list1.toString());
+        list1.reverse();
+        System.out.println("List1 after reverse = "+ list1.toString());
+//        LinkedList<Integer> list2 = new LinkedList<Integer>();
+//        list2.append(-1);
+//        list2.append(-2);
+//        list2.append(-3);
+//        System.out.println("List2 = "+ list2.toString());
+//        System.out.println("ZipedList = "+ zipLists(list1 , list2));
 
     }
 

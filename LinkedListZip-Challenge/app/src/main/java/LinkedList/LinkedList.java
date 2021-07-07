@@ -113,6 +113,31 @@ public class LinkedList<T> {
         }
         return (this.length - data) < 1 ? (T)"Exception":currentHead.getData() ;
     }
+
+    public void reverse(){
+        Node currentHead = this.head ;
+        int test = (int)this.head.getData();
+        Node lastNode = null ;
+        while(this.head.getNext()!=null){
+            currentHead = currentHead.getNext();
+            int test1 = (int)currentHead.getData();
+            if(currentHead.getNext().getNext()==null){
+                int test4 = (int)currentHead.getData();
+                (currentHead.getNext()).setNext(currentHead);
+//                int test2 = (int)currentHead.getNext().getData();
+                int test3 = (int)this.head.getData() ;
+                int test2 = (int)currentHead.getData();
+
+                lastNode = currentHead ;
+                lastNode.getData();
+                lastNode.setNext(null);
+                currentHead = this.head;
+                if(lastNode == this.head)
+                    break;
+            }
+        }
+
+    }
 }
 
 
