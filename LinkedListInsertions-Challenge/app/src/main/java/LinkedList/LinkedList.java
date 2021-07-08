@@ -108,4 +108,14 @@ public class LinkedList<T> {
         currentHead.setNext(node);
         length++;
     }
+
+    public T kthFromEnd(int data){
+        Node<T> currentHead = this.head ;
+        for(int i = 1 ; i < (this.length - data) ; i++ ){
+            currentHead = currentHead.getNext();
+        }
+        return (this.length - data) < 1 ? (T)"Exception":currentHead.getData() ;
+    }
 }
+
+

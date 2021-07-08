@@ -45,3 +45,12 @@ Example :
         testList.append(10);
         testList.insertAfter(5 , -7);
         testList.insertBefore(2 , 9);
+
+# [Challenge 7 (linked-list-kth)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedListInsertions-Challenge/app/src/main/java) :
+
+## Challenge description
+appended to the created LinkedList these methods
+* kthFromEnd  --> to get the data but from the last to the beginning of the list
+Example :
+  1 -> 3 -> 8 -> 2 ->       input=0 , output=2 	
+
