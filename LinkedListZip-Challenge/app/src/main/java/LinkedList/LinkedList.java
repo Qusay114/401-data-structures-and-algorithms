@@ -115,27 +115,53 @@ public class LinkedList<T> {
     }
 
     public void reverse(){
-        Node currentHead = this.head ;
-        int test = (int)this.head.getData();
-        Node lastNode = null ;
-        while(this.head.getNext()!=null){
-            currentHead = currentHead.getNext();
-            int test1 = (int)currentHead.getData();
-            if(currentHead.getNext().getNext()==null){
-                int test4 = (int)currentHead.getData();
-                (currentHead.getNext()).setNext(currentHead);
-//                int test2 = (int)currentHead.getNext().getData();
-                int test3 = (int)this.head.getData() ;
-                int test2 = (int)currentHead.getData();
-
-                lastNode = currentHead ;
-                lastNode.getData();
-                lastNode.setNext(null);
-                currentHead = this.head;
-                if(lastNode == this.head)
-                    break;
-            }
+        int steps = this.length ;
+        if(this.head == null)
+            return;
+        if(this.head.getNext()==null)
+            return;
+        if (this.head.getNext().getNext()==null)
+        {
+            Node node = this.head.getNext() ;
+            this.head.setNext(null);
+            node.setNext(this.head);
+            this.head = node ;
+            return;
         }
+        Node currentHead = this.head ;
+        Node newHead = null;
+        int counter = 0 ;
+        int checkLastNode = 1 ;
+        Node lastNode = null ;
+        while(this.head.getNext().getNext()!=null){
+            counter++ ;
+            if(steps > 3) {
+                currentHead = currentHead.getNext().getNext().getNext();
+                steps-=3;
+            }
+            else
+                currentHead = currentHead.getNext();
+            if(currentHead.getNext().getNext()==null){
+                Node node = currentHead.getNext() ;
+                Node node1 = currentHead ;
+                node1.setNext(null);
+                (node).setNext(node1);
+                if(checkLastNode==1) {
+                    newHead = node;
+                    checkLastNode = 0 ;
+                }
+                length-=2;
+                steps=length;
+                lastNode = currentHead ;
+                currentHead = this.head;
+
+            }
+
+        }
+        this.head.setNext(null);
+        lastNode.setNext(this.head);
+        this.head = newHead ;
+        System.out.println("Counter is " + counter);
 
     }
 }
