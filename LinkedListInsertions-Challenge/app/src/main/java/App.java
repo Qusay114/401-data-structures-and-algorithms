@@ -23,7 +23,7 @@ public class App {
         System.out.println("is 3 exists ? " + list1.includes(3));
         System.out.println("the linkedlist values "+ list1.toString());
         System.out.println("The length is  "+ list1.getLength());
-        System.out.println("the kth is " + list1.kthFromEnd(6));
+        System.out.println("the kth is " + list1.kthFromEnd(-4));
 
     }
 }

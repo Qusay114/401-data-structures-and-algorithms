@@ -111,10 +111,10 @@ public class LinkedList<T> {
 
     public T kthFromEnd(int data){
         Node<T> currentHead = this.head ;
-        for(int i = 1 ; i < (this.length - data) ; i++ ){
+        for(int i = 1 ; i < (this.length - data) && data > 0; i++ ){
             currentHead = currentHead.getNext();
         }
-        return (this.length - data) < 1 ? (T)"Exception":currentHead.getData() ;
+        return (this.length - data) < 1 || data < 0 ? (T)"Exception":currentHead.getData() ;
     }
 }
 

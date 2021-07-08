@@ -50,8 +50,8 @@ class AppTest {
         testList.insertAfter(5 , -7);
         assertEquals("{ -11 } -> { 2 } -> { 5 } -> { -7 } -> { 10 } -> NULL" , testList.toString());
     }
-    @Test
-    public void testInsertAfterLastNode(){
+   @Test
+   public void testInsertAfterLastNode(){
         LinkedList testList = new LinkedList();
         testList.append(-11);
         testList.append(2);
@@ -59,6 +59,51 @@ class AppTest {
         testList.append(10);
         testList.insertAfter(10 , -7);
         assertEquals("{ -11 } -> { 2 } -> { 5 } -> { 10 } -> { -7 } -> NULL" , testList.toString());
+
     }
+    @Test
+    public void testKbiggerThanLength(){
+        LinkedList testList = new LinkedList() ;
+        testList.append(1);
+        testList.append(2);
+        testList.append(3);
+        testList.append(4);
+        assertEquals("Exception" , testList.kthFromEnd(6));
+    }
+    @Test
+    public void testKequalLength(){
+        LinkedList testList = new LinkedList() ;
+        testList.append(1);
+        testList.append(2);
+        testList.append(3);
+        testList.append(4);
+        assertEquals("Exception" , testList.kthFromEnd(4));
+    }
+    @Test
+    public void testKnegative(){
+        LinkedList testList = new LinkedList() ;
+        testList.append(1);
+        testList.append(2);
+        testList.append(3);
+        testList.append(4);
+        assertEquals("Exception" , testList.kthFromEnd(-7));
+    }
+    @Test
+    public void testLengthEq1(){
+        LinkedList testList = new LinkedList() ;
+        testList.append(1);
+        assertEquals(1 , testList.kthFromEnd(0));
+    }
+    @Test
+    public void testKinMiddle(){
+        LinkedList testList = new LinkedList() ;
+        testList.append(1);
+        testList.append(2);
+        testList.append(3);
+        testList.append(4);
+        testList.append(5);
+        assertEquals(3 , testList.kthFromEnd(2));
+
+
 
 }
