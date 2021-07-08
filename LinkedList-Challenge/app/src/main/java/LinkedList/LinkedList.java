@@ -14,11 +14,10 @@ public class LinkedList<T> {
             return;
         }
         else {
-            Node<T> currentHead = head ;
-            while (currentHead.getNext() != null) {
-                currentHead = currentHead.getNext();
-            }
-            currentHead.setNext(node);
+
+            Node previousHead = this.head ;
+            node.setNext(previousHead);
+            this.head = node ;
             length++;
         }
 
@@ -52,7 +51,11 @@ public class LinkedList<T> {
     }
 
     public int getLength(){
+
         return length ;
+    }
+    public T getHead(){
+        return (T)this.head.getData() ;
     }
 
 }
