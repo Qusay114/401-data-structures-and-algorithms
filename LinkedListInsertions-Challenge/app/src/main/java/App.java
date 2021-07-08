@@ -18,8 +18,8 @@ public class App {
         list1.insert(2);
         list1.insert(3);
         list1.append(4);
-        list1.insertBefore(2 , 0);
-        list1.insertAfter(2 , -10);
+        list1.insertBefore(10 , 0);
+//        list1.insertAfter(2 , -10);
         System.out.println("is 3 exists ? " + list1.includes(3));
         System.out.println("the linkedlist values "+ list1.toString());
         System.out.println("The length is  "+ list1.getLength());
