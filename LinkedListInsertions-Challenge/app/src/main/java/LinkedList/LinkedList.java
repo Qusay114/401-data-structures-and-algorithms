@@ -29,15 +29,15 @@ public class LinkedList<T> {
             return;
         }
         else {
-            Node<T> currentHead = head ;
-            while (currentHead.getNext() != null) {
-                currentHead = currentHead.getNext();
-            }
-            currentHead.setNext(node);
+
+            Node previousHead = this.head ;
+            node.setNext(previousHead);
+            this.head = node ;
             length++;
         }
 
     }
+
     public boolean includes(T data){
         Node node= new Node(data);
         Node currentHead = head;
@@ -83,8 +83,12 @@ public class LinkedList<T> {
         }
         else {
             Node<T> currentHead = head ;
+            int loopSize = length-1 ;
             while (currentHead.getNext().getData() != data) {
+                loopSize -- ;
                 currentHead = currentHead.getNext();
+                if (loopSize==0)
+                    return;
             }
             Node node2 = currentHead.getNext() ;
             node.setNext(node2);
@@ -107,10 +111,10 @@ public class LinkedList<T> {
 
     public T kthFromEnd(int data){
         Node<T> currentHead = this.head ;
-        for(int i = 1 ; i < (this.length - data) ; i++ ){
+        for(int i = 1 ; i < (this.length - data) && data > 0; i++ ){
             currentHead = currentHead.getNext();
         }
-        return (this.length - data) < 1 ? (T)"Exception":currentHead.getData() ;
+        return (this.length - data) < 1 || data < 0 ? (T)"Exception":currentHead.getData() ;
     }
 }
 
