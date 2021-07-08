@@ -8,13 +8,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-   LinkedList<Integer> list1 = new LinkedList<Integer>();
-   list1.insert(1);
-   list1.insert(2);
-   list1.insert(3);
-   System.out.println("is 3 exists ? " + list1.includes(3));
-   System.out.println("the linkedlist values "+ list1.toString());
-   System.out.println("The length is  "+ list1.getLength());
+
 
     }
 }

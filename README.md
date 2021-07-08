@@ -4,22 +4,27 @@
 
 
 
-### 2. [challenge 2 (Array Insert Shift)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayInsertShift-challenge/src)
+
+### 2. [challenge 2 (Array Insert Shift)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayInsertShift-challenge/src) 
 
 
 
 ### 3. [challenge 3 (Binary Array Search)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayBinarySearch-Challenge/src) :
 
 
-### 5. [Challenge 5 (LinkedList)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedList-Challenge/app/src) :
 
-#### Challenge description
+### 4. [Challenge 5 (LinkedList)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedList-Challenge/app/src) :
+
+#### Challenge description 
+
 Create a linked list data structure which has these methods :
 * insert  --> to add data to your linked list
 * include --> to check if the linkedlist has the data or not
 * toString --> to convert your linkedlist to a list in a form like this<br>"{ a } -> { b } -> { c } -> NULL"
-  <b><br>
-### 6. [Challenge 6 (append LinkedList)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedListInsertions-Challenge/app/src) :
+
+<b><br>
+### 5. [Challenge 6 (append LinkedList)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedListInsertions-Challenge/app/src) :
+
 
 
 #### Challenge Summary
@@ -45,12 +50,15 @@ Example :
         testList.insertAfter(5 , -7);
         testList.insertBefore(2 , 9);
 
+
+
 ### 7. [Challenge 7 (linked-list-kth)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedListInsertions-Challenge/app/src/main/java) :
 
 #### Challenge Summary
 * kthFromEnd  --> to get the data but from the last to the beginning of the list
   Example :
   1 -> 3 -> 8 -> 2 ->       input=0 , output=2 	
+
 
 #### Whiteboard Process
 [whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedListInsertions-Challenge/app/src/main/java/CodeChallenge-7.png)
@@ -66,3 +74,4 @@ Example :
         testList.append(5);
         testList.append(10);
         testList.kthFromEnd(3)   // here is the method and will return -11
+

@@ -7,6 +7,60 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
+    @Test
+    public void testAppend(){
+        LinkedList testList = new LinkedList();
+        testList.append(1);
+        testList.append(2);
+        testList.append(3);
+        assertEquals("{ 1 } -> { 2 } -> { 3 } -> NULL" , testList.toString());
+
+    }
+
+    @Test
+    public void testInsertBefore(){
+        LinkedList testList = new LinkedList();
+        testList.append(-11);
+        testList.append(2);
+        testList.append(5);
+        testList.append(10);
+        testList.insertBefore(10 , 17);
+        assertEquals("{ -11 } -> { 2 } -> { 5 } -> { 17 } -> { 10 } -> NULL" , testList.toString());
+
+    }
+
+    @Test
+    public void testInsertBeforeHead(){
+        LinkedList testList = new LinkedList();
+        testList.append(-11);
+        testList.append(2);
+        testList.append(5);
+        testList.append(10);
+        testList.insertBefore(-11 , 17);
+        assertEquals("{ 17 } -> { -11 } -> { 2 } -> { 5 } -> { 10 } -> NULL" , testList.toString());
+    }
+    @Test
+    public void testInsertAfter(){
+        LinkedList testList = new LinkedList();
+        testList.append(-11);
+        testList.append(2);
+        testList.append(5);
+        testList.append(10);
+        testList.insertAfter(5 , -7);
+        assertEquals("{ -11 } -> { 2 } -> { 5 } -> { -7 } -> { 10 } -> NULL" , testList.toString());
+    }
+   @Test
+   public void testInsertAfterLastNode(){
+        LinkedList testList = new LinkedList();
+        testList.append(-11);
+        testList.append(2);
+        testList.append(5);
+        testList.append(10);
+        testList.insertAfter(10 , -7);
+        assertEquals("{ -11 } -> { 2 } -> { 5 } -> { 10 } -> { -7 } -> NULL" , testList.toString());
+
+    }
     @Test
     public void testKbiggerThanLength(){
         LinkedList testList = new LinkedList() ;
@@ -49,6 +103,7 @@ class AppTest {
         testList.append(4);
         testList.append(5);
         assertEquals(3 , testList.kthFromEnd(2));
-    }
+
+
 
 }
