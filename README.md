@@ -5,9 +5,7 @@
 
 
 
-
-### 2. [challenge 2 (Array Insert Shift)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayInsertShift-challenge/src) 
-
+### 2. [challenge 2 (Array Insert Shift)](https://github.com/Qusay114/401-data-structures-and-algorithms/blob/main/ArrayInsertShift-challenge/src)
 
 
 
@@ -17,8 +15,7 @@
 
 ### 4. [Challenge 5 (LinkedList)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedList-Challenge/app/src) :
 
-
-#### Challenge description 
+#### Challenge description
 
 Create a linked list data structure which has these methods :
 * insert  --> to add data to your linked list
@@ -27,6 +24,7 @@ Create a linked list data structure which has these methods :
 
 <b><br>
 ### 5. [Challenge 6 (append LinkedList)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedListInsertions-Challenge/app/src) :
+
 
 
 #### Challenge Summary
@@ -68,7 +66,6 @@ Example :
 #### Solution :
 to see the function in action! you should create an instance of the LinkedList class and call the method .
 
-
 Example :
 
         LinkedList testList = new LinkedList();
@@ -76,7 +73,6 @@ Example :
         testList.append(2);
         testList.append(5);
         testList.append(10);
-
         testList.kthFromEnd(3)   // here is the method and will return -11
 
 
@@ -91,7 +87,6 @@ Example :
 
 #### Whiteboard Process
 [whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/LinkedListZip-Challenge/app/src/main/java/CodeChallenge-8.png)
-
 
 #### Solution :
 to see the function in action! you should create an instance of the LinkedList class and call the method .
@@ -108,5 +103,4 @@ Example :
         list1.append(6);
         zipedLinkedList(list1,list2)  // it will return linked list with these values:
         // 1 --> 4 --> 3 --> 5 --> 2 --> 6 --> null
-
 
