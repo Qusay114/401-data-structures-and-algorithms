@@ -29,15 +29,15 @@ public class LinkedList<T> {
             return;
         }
         else {
-            Node<T> currentHead = head ;
-            while (currentHead.getNext() != null) {
-                currentHead = currentHead.getNext();
-            }
-            currentHead.setNext(node);
+
+            Node previousHead = this.head ;
+            node.setNext(previousHead);
+            this.head = node ;
             length++;
         }
 
     }
+
     public boolean includes(T data){
         Node node= new Node(data);
         Node currentHead = head;
@@ -83,8 +83,12 @@ public class LinkedList<T> {
         }
         else {
             Node<T> currentHead = head ;
+            int loopSize = length-1 ;
             while (currentHead.getNext().getData() != data) {
+                loopSize -- ;
                 currentHead = currentHead.getNext();
+                if (loopSize==0)
+                    return;
             }
             Node node2 = currentHead.getNext() ;
             node.setNext(node2);

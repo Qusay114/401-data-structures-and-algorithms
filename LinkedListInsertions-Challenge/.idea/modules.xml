@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LinkedListInsertions-Challenge.iml" filepath="$PROJECT_DIR$/.idea/modules/LinkedListInsertions-Challenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LinkedListInsertions-Challenge.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LinkedListInsertions-Challenge.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LinkedListInsertions-Challenge.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LinkedListInsertions-Challenge.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LinkedListInsertions-Challenge.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LinkedListInsertions-Challenge.app.test.iml" />
+    </modules>
+  </component>
+</project>
