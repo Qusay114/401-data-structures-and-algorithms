@@ -104,3 +104,30 @@ Example :
         zipedLinkedList(list1,list2)  // it will return linked list with these values:
         // 1 --> 4 --> 3 --> 5 --> 2 --> 6 --> null
 
+
+### 10. [Challenge 10 (Stack And Queue )](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Stack-Queue-Challenge/app/src/main/java) :
+
+#### Stacks and Queues : 
+<!-- Short summary or background information -->
+Stack and Queue Linked lists data structure , where you can instantiate  , add and remove from them
+#### Challenge :
+<!-- Description of the challenge -->
+* Create a Stack class that has a top property. It creates an empty Stack when instantiated.This object should be aware of a default empty value assigned to top when the stack is created.
+<br><br>
+* Create a Queue class that has a front property. It creates an empty Queue when instantiated. This object should be aware of a default empty value assigned to front when the queue is created.
+
+
+## API
+<!-- Description of each method publicly available to your Stack and Queue-->
+
+Stack :
+created Stack Linkedlist , where you can use these methods :
+* push : where you can add on the top of the stack .
+* pop  : where you can remove from the top of the stack .
+* peek : where you can get the top of the stack .
+
+Queue :
+created Queue Linkedlist , where you can use these methods :
+* enqueue  : where you can add in the front of the queue .
+* dequeue  : where you can remove from the front of the queue .
+* peek     : where you can get the front of the stack .
