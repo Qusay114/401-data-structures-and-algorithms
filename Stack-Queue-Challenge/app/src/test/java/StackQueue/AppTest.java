@@ -3,6 +3,7 @@
  */
 package StackQueue;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -112,4 +113,32 @@ class AppTest {
         assertEquals("Exception" , testQueueList.dequeue());
         assertEquals("Exception" , testQueueList.peek());
     }
+    @DisplayName("Test Instantiate Pseudo Queue")
+    @Test
+    public void testInstantiatePseudoQueue(){
+        PseudoQueue pseudoQueueTest = new PseudoQueue() ;
+        assertEquals("empty" , pseudoQueueTest.toString() );
+    }
+    @DisplayName("Test Enqueue Pseudo Queue")
+    @Test
+    public void testEnqueuePseudoQueue(){
+        PseudoQueue pseudoQueueTest = new PseudoQueue() ;
+        pseudoQueueTest.enqueue(20);
+        pseudoQueueTest.enqueue(15);
+        pseudoQueueTest.enqueue(10);
+        pseudoQueueTest.enqueue(5);
+        assertEquals("{5} -> {10} -> {15} -> {20} -> NULL" , pseudoQueueTest.toString());
+    }
+    @DisplayName("Test Dequeue Pseudo Queue")
+    @Test
+    public void testDequeuePseudoQueue(){
+        PseudoQueue pseudoQueueTest = new PseudoQueue() ;
+        pseudoQueueTest.enqueue(20);
+        pseudoQueueTest.enqueue(15);
+        pseudoQueueTest.enqueue(10);
+        pseudoQueueTest.enqueue(5);
+        pseudoQueueTest.dequeue();
+        assertEquals("{5} -> {10} -> {15} -> NULL" , pseudoQueueTest.toString());
+    }
+
 }

@@ -10,25 +10,6 @@ public class App {
 
     public static void main(String[] args) {
 
-//        StackLinkedList testStackList = new StackLinkedList() ;
-//        testStackList.push(1);
-//        testStackList.push(2);
-//        testStackList.push(3);
-//        System.out.println("pop value " +testStackList.pop());
-//        System.out.println("is empty ? "+testStackList.isEmpty());
-//        System.out.println("pop value " +testStackList.pop());
-//        System.out.println("pop value " +testStackList.pop());
-//        System.out.println("pop value " +testStackList.pop());
-//        System.out.println("top is " + testStackList.peek());
-//        System.out.println("the list is "+testStackList.toString());
-        QueueLinkedList testQueueList = new QueueLinkedList();
-        testQueueList.enqueue(1);
-        testQueueList.enqueue(2);
-        testQueueList.enqueue(3);
-        System.out.println("dequeue value " + testQueueList.dequeue());
-        System.out.println("The peek is "+testQueueList.peek());
-        System.out.println("is empty ? "+testQueueList.isEmpty());
-        System.out.println("The queue list is "+testQueueList.toString());
 
     }
 }

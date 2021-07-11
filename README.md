@@ -131,3 +131,29 @@ created Queue Linkedlist , where you can use these methods :
 * enqueue  : where you can add in the front of the queue .
 * dequeue  : where you can remove from the front of the queue .
 * peek     : where you can get the front of the stack .
+
+
+### 11. [Challenge 11 (Pseudo Queue )](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Stack-Queue-Challenge/app/src/main/java) :
+
+#### Pseudo Queue :
+<!-- Short summary or background information -->
+Pseudo Queue data structure , where it follows first in - first out approach
+#### Challenge :
+<!-- Description of the challenge -->
+* Create a new class called pseudo queue. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),  Internally, utilize 2 Stack instances to create and manage the queue
+
+## API
+<!-- Description of each method publicly available to your Stack and Queue-->
+
+* Methods : 
+* enqueue : Inserts value into the PseudoQueue, using a first-in, first-out approach.
+* dequeue : Extracts a value from the PseudoQueue, using a first-in, first-out approach. 
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Stack-Queue-Challenge/app/src/main/java/CodeChallenge-11.png)
+
+
+## Run The Program : 
+you can create an instance of the PseudoQueue class , and enqueue your data , and you can dequeue .
+* RUN THE TESTS USING gradle test 
+* RUN THE APP USING gradle run 
