@@ -116,9 +116,7 @@ public class LinkedList<T> {
 
     public void reverse(){
         int steps = this.length ;
-        if(this.head == null)
-            return;
-        if(this.head.getNext()==null)
+        if(this.head == null || this.head.getNext()==null)
             return;
         if (this.head.getNext().getNext()==null)
         {
