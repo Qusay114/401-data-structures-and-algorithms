@@ -9,8 +9,8 @@ public class AnimalShelter<T> {
         this.back = null ;
     }
 
-    public void enqueue(String data){
-        Node<String> newNode = new Node(data);
+    public void enqueue(Animal data){
+        Node<String> newNode = new Node<>(data.getType());
         if(this.back == null){
             this.front = newNode ;
             this.back = newNode ;
@@ -35,6 +35,8 @@ public class AnimalShelter<T> {
         while (currentFront.getNext().getData()!=pref)
         {
             currentFront = currentFront.getNext();
+            if(currentFront.getNext() == null)
+                return null ;
         }
         Node deletedNode = currentFront.getNext();
         currentFront.setNext(deletedNode.getNext());
@@ -47,9 +49,9 @@ public class AnimalShelter<T> {
     public String toString(){
         if (this.front == null)
             return "The Queue list is empty";
-        Node currentFront = this.front ;
+        Node<String> currentFront = this.front ;
         String output = "{ "+currentFront.getData()+" } -> ";
-        while (currentFront!=this.back){
+        while (currentFront.getNext()!=null){
             currentFront = currentFront.getNext();
             output += "{ "+currentFront.getData()+" } -> ";
         }

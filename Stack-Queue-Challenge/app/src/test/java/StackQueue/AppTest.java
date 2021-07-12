@@ -140,5 +140,37 @@ class AppTest {
         pseudoQueueTest.dequeue();
         assertEquals("{5} -> {10} -> {15} -> NULL" , pseudoQueueTest.toString());
     }
+    @DisplayName("Test enqueue in AnimalShelter")
+    @Test
+    public void testEnqueueAnimalShelter() {
+        AnimalShelter animalShelterTest = new AnimalShelter();
+        Animal cat = new Animal("cat");
+        Animal dog = new Animal("dog");
+        Animal cat1 = new Animal("cat");
+        Animal dog1 = new Animal("dog");
+        animalShelterTest.enqueue(cat);
+        animalShelterTest.enqueue(dog);
+        animalShelterTest.enqueue(cat1);
+        animalShelterTest.enqueue(dog1);
+        assertEquals("{ cat } -> { dog } -> { cat } -> { dog } -> NULL" , animalShelterTest.toString() ,
+        "it should return the animals that equeued!");
+    }
+    @DisplayName("Test dequeue in AnimalShelter")
+    @Test
+    public void testDequeueAnimalShelter(){
+        AnimalShelter animalShelterTest = new AnimalShelter();
+        Animal cat = new Animal("cat");
+        Animal dog = new Animal("dog");
+        Animal cat1 = new Animal("cat");
+        Animal dog1 = new Animal("dog");
+        animalShelterTest.enqueue(cat);
+        animalShelterTest.enqueue(dog);
+        animalShelterTest.enqueue(cat1);
+        animalShelterTest.enqueue(dog1);
+        assertEquals("dog" , animalShelterTest.dequeue("dog") , "it should return dog!");
+        assertEquals("{ cat } -> { cat } -> { dog } -> NULL" , animalShelterTest.toString() ,
+                "it should return the animals that equeued except the one has been dequeued");
+
+    }
 
 }
