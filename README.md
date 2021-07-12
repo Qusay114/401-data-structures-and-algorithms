@@ -157,3 +157,41 @@ Pseudo Queue data structure , where it follows first in - first out approach
 you can create an instance of the PseudoQueue class , and enqueue your data , and you can dequeue .
 * RUN THE TESTS USING gradle test 
 * RUN THE APP USING gradle run 
+
+### 12. [Challenge 12 (AnimalShilter )](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Stack-Queue-Challenge/app/src/main/java) :
+
+#### AnimalShelter :
+<!-- Short summary or background information -->
+a data structure to hold cats and dogs objects where you can enqueue and dequeue
+#### Challenge :
+<!-- Description of the challenge -->
+* Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+## API
+<!-- Description of each method publicly available to your Stack and Queue-->
+
+* Methods :
+* enqueue : Inserts cat or dog object into the animalShilter, using a first-in, first-out approach.
+* dequeue : Extracts cat or dog object based on the pref ,  using a first-in, first-out approach.
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Stack-Queue-Challenge/app/src/main/java/CodeChallenge-11.png)
+
+
+## Run The Program :
+you can create an instance of the AnimalShilter class , and enqueue your Animal objects , and you can dequeue .
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run 
+
+Example :
+
+        AnimalShelter animalShelterTest = new AnimalShelter();
+        Animal cat = new Animal("cat");
+        Animal dog = new Animal("dog");
+        Animal cat1 = new Animal("cat");
+        Animal dog1 = new Animal("dog");
+        animalShelterTest.enqueue(cat);
+        animalShelterTest.enqueue(dog);
+        animalShelterTest.enqueue(cat1);
+        animalShelterTest.enqueue(dog1);
+        animalShelterTest.dequeue("dog");
+        System.out.println(animalShelter.toString());  // the animalSelter wil be "{ cat } -> { cat } -> { dog } -> NULL"
