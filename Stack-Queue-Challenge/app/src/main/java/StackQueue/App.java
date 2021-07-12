@@ -12,23 +12,7 @@ public class App {
 
     public static void main(String[] args) {
 
-//        Animal cat = new Animal("Cat");
-//        Animal dog = new Animal("Dog");
-        AnimalShelter animalShelter = new AnimalShelter() ;
-        Animal cat = new Animal("cat");
-        Animal dog = new Animal("dog");
-        Animal cat1 = new Animal("cat");
-        Animal dog1 = new Animal("dog");
-        animalShelter.enqueue(cat);
-        animalShelter.enqueue(dog);
-        animalShelter.enqueue(cat1);
-        animalShelter.enqueue(dog1);
-//        animalShelter.dequeue("dog");
-//        animalShelter.dequeue("dog");
-//        animalShelter.dequeue("cat");
-//        animalShelter.dequeue("cat");
-//        System.out.println(animalShelter.dequeue("dog"));
-        System.out.println(animalShelter.toString());
+
 
     }
 }
