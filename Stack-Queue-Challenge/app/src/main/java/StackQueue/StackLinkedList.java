@@ -8,7 +8,7 @@ public class StackLinkedList<T> {
     }
 
     public void push(T data){
-        Node newNode = new Node(data);
+        Node<T> newNode = new Node(data);
         if(this.top == null){
             this.top =newNode ;
             return;
@@ -35,13 +35,13 @@ public class StackLinkedList<T> {
     }
 
     public Boolean isEmpty(){
-        return this.top==null ? true : false ;
+        return this.top == null;
     }
 
     public String toString(){
         if (this.top == null)
             return "The stack is empty";
-        Node currentTop = this.top ;
+        Node<T> currentTop = this.top ;
         String output = "{"+currentTop.getData()+"} -> " ;
         while (currentTop.getNext()!=null){
             currentTop = currentTop.getNext() ;

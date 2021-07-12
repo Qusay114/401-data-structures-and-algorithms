@@ -1,21 +1,21 @@
 package StackQueue;
 
 public class QueueLinkedList<T> {
-    private Node front ;
-    private Node back ;
+    private Node<T> front ;
+    private Node<T> back ;
     public QueueLinkedList(){
         this.front = null ;
         this.back = null ;
     }
 
     public void enqueue(T data){
-        Node newNode = new Node(data);
+        Node<T> newNode = new Node(data);
         if(this.back == null){
             this.front = newNode ;
             this.back = newNode ;
             return;
         }
-        Node previousBack = this.back ;
+        Node<T> previousBack = this.back ;
         this.back = newNode ;
         previousBack.setNext(this.back);
     }
@@ -37,7 +37,7 @@ public class QueueLinkedList<T> {
     }
 
     public Boolean isEmpty(){
-        return this.front == null ? true : false ;
+        return this.front == null;
     }
 
     public String toString(){
