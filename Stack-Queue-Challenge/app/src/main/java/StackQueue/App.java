@@ -3,6 +3,8 @@
  */
 package StackQueue;
 
+import org.checkerframework.checker.units.qual.A;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,6 +12,15 @@ public class App {
 
     public static void main(String[] args) {
 
-
+//        Animal cat = new Animal("Cat");
+//        Animal dog = new Animal("Dog");
+        AnimalShelter animalShelter = new AnimalShelter() ;
+        animalShelter.enqueue("cat");
+        animalShelter.enqueue("dog");
+        animalShelter.enqueue("dog");
+        animalShelter.dequeue("dog");
+        animalShelter.dequeue("dog");
+        System.out.println(animalShelter.toString());
+//        System.out.println(newAnimal.getType());
     }
 }
