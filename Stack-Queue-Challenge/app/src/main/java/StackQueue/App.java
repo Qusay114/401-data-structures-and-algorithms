@@ -12,7 +12,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println(validateBrackets("{}(){}"));
+        System.out.println(validateBrackets("{(})"));
 
     }
 
@@ -37,7 +37,7 @@ public class App {
                             continue;
                         }
                     }
-                    if (holdOpenings.peek() == (Character) '}') {
+                    if (holdOpenings.peek() == (Character) '{') {
                         if (c == '}') {
                             holdOpenings.pop();
                             continue;
