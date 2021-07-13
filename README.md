@@ -195,3 +195,40 @@ Example :
         animalShelterTest.enqueue(dog1);
         animalShelterTest.dequeue("dog");
         System.out.println(animalShelter.toString());  // the animalSelter wil be "{ cat } -> { cat } -> { dog } -> NULL"
+
+
+
+### 13. [Challenge 13 (Validate Brackets)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Stack-Queue-Challenge/app/src/main/java) :
+
+#### Validate Brackets :
+<!-- Short summary or background information -->
+a function to check if the passed string has a validate opening and closing () {} []
+#### Challenge :
+<!-- Description of the challenge -->
+* Write a function called validate brackets
+  Arguments: string
+  Return: boolean
+  representing whether or not the brackets in the string are balanced
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Stack-Queue-Challenge/app/src/main/java/CodeChallenge-11.png)
+
+
+## Run The Program :
+you can create an instance of the AnimalShilter class , and enqueue your Animal objects , and you can dequeue .
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run
+
+Example :
+
+        AnimalShelter animalShelterTest = new AnimalShelter();
+        Animal cat = new Animal("cat");
+        Animal dog = new Animal("dog");
+        Animal cat1 = new Animal("cat");
+        Animal dog1 = new Animal("dog");
+        animalShelterTest.enqueue(cat);
+        animalShelterTest.enqueue(dog);
+        animalShelterTest.enqueue(cat1);
+        animalShelterTest.enqueue(dog1);
+        animalShelterTest.dequeue("dog");
+        System.out.println(animalShelter.toString());  // the animalSelter wil be "{ cat } -> { cat } -> { dog } -> NULL"

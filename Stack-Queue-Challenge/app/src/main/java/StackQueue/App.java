@@ -12,11 +12,12 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println(validateBrackets("{(})"));
+        System.out.println(new App().validateBrackets("{}{Code}[Fellows](()"));
+
 
     }
 
-    public static Boolean validateBrackets(String code){
+    public  Boolean validateBrackets(String code){
         StackLinkedList holdOpenings = new StackLinkedList() ;
         Character c = 'c' ;
         for(int i = 0 ; i < code.length() ; i++){
@@ -48,6 +49,7 @@ public class App {
             }
 
         }
-        return true ;
+
+        return holdOpenings.isEmpty() ;
     }
 }

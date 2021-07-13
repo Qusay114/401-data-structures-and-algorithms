@@ -3,6 +3,7 @@
  */
 package StackQueue;
 
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -171,6 +172,19 @@ class AppTest {
         assertEquals("{ cat } -> { cat } -> { dog } -> NULL" , animalShelterTest.toString() ,
                 "it should return the animals that equeued except the one has been dequeued");
 
+    }
+
+    @DisplayName("Test Validate Brackets function")
+    @Test
+    public void testValidateBrackets(){
+        App appTest = new App();
+        assertTrue(appTest.validateBrackets("{}(){}") , "it should return true!");
+        assertTrue(appTest.validateBrackets("()[[Extra Characters]]") , "it should return true!");
+        assertTrue(appTest.validateBrackets("{}{Code}[Fellows](())") , "it should return true!");
+
+        assertFalse(appTest.validateBrackets("[({}]") , "it should return false!");
+        assertFalse(appTest.validateBrackets("(](") , "it should return false!");
+        assertFalse(appTest.validateBrackets("{(})") , "it should return false!");
     }
 
 }
