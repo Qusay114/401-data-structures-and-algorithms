@@ -12,7 +12,42 @@ public class App {
 
     public static void main(String[] args) {
 
+        System.out.println(validateBrackets("{}(){}"));
 
+    }
 
+    public static Boolean validateBrackets(String code){
+        StackLinkedList holdOpenings = new StackLinkedList() ;
+        Character c = 'c' ;
+        for(int i = 0 ; i < code.length() ; i++){
+            c = code.charAt(i);
+            if(c=='(' || c=='[' || c=='{')
+                holdOpenings.push(c);
+            else {
+                if (c == ')' || c == ']' || c == '}') {
+                    if (holdOpenings.peek() == (Character) '(') {
+                        if (c == ')') {
+                            holdOpenings.pop();
+                            continue;
+                        }
+                    }
+                    if (holdOpenings.peek() == (Character) '[') {
+                        if (c == ']') {
+                            holdOpenings.pop();
+                            continue;
+                        }
+                    }
+                    if (holdOpenings.peek() == (Character) '}') {
+                        if (c == '}') {
+                            holdOpenings.pop();
+                            continue;
+                        }
+                    }
+                    return false;
+                }
+            }
+
+        }
+        return true ;
     }
 }
