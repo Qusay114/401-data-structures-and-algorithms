@@ -215,20 +215,11 @@ a function to check if the passed string has a validate opening and closing () {
 
 
 ## Run The Program :
-you can create an instance of the AnimalShilter class , and enqueue your Animal objects , and you can dequeue .
+you can create an instance of App , and call validateBrackets method
 * RUN THE TESTS USING gradle test
 * RUN THE APP USING gradle run
 
 Example :
 
-        AnimalShelter animalShelterTest = new AnimalShelter();
-        Animal cat = new Animal("cat");
-        Animal dog = new Animal("dog");
-        Animal cat1 = new Animal("cat");
-        Animal dog1 = new Animal("dog");
-        animalShelterTest.enqueue(cat);
-        animalShelterTest.enqueue(dog);
-        animalShelterTest.enqueue(cat1);
-        animalShelterTest.enqueue(dog1);
-        animalShelterTest.dequeue("dog");
-        System.out.println(animalShelter.toString());  // the animalSelter wil be "{ cat } -> { cat } -> { dog } -> NULL"
+        new App().validateBrackets("{}{Code}[Fellows](()")  //it will return false
+        new App().validateBrackets("{}{Code}[Fellows](())") //it will return true
