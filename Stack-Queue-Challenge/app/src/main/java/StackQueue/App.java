@@ -5,6 +5,8 @@ package StackQueue;
 
 import org.checkerframework.checker.units.qual.A;
 
+import java.util.List;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -12,9 +14,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println(new App().validateBrackets("{}{Code}[Fellows](()"));
-
-
+//        System.out.println(new App().validateBrackets("{}{Code}[Fellows](()"));
+        QueueLinkedList testGame = new QueueLinkedList();
+        testGame.enqueue("a");
+        testGame.enqueue("b");
+        testGame.enqueue("c");
+//        testGame.enqueue("d");
+//        testGame.enqueue("e");
+//        duckDuckGoose(testGame , 3);
+        System.out.println(duckDuckGoose(testGame , 3));
     }
 
     public  Boolean validateBrackets(String code){
@@ -51,5 +59,45 @@ public class App {
         }
 
         return holdOpenings.isEmpty() ;
+    }
+
+    public static String duckDuckGoose(QueueLinkedList listStr , int k){
+        QueueLinkedList tempList = new QueueLinkedList() ;
+        Boolean checkList = true ;
+        String winner = "" ;
+        for(int i = 1 ; !listStr.isEmpty() || !tempList.isEmpty() ;i++ ){
+            if(checkList){
+                if(listStr.isEmpty()){
+                    checkList = false ;
+                    i--;
+                    continue;
+                }
+                if(i!=k) {
+                    winner = (String) listStr.dequeue() ;
+                    tempList.enqueue(winner);
+                }
+                else {
+                    winner = (String) listStr.dequeue();
+                    i=0 ;
+                }
+            }
+            else{
+
+                if(tempList.isEmpty()){
+                    checkList = true ;
+                    i--;
+                    continue;
+                }
+                if(i!=k) {
+                    winner = (String)tempList.dequeue() ;
+                    listStr.enqueue(winner);
+                }
+                else {
+                    winner = (String) tempList.dequeue();
+                    i=0;
+                }
+            }
+        }
+        return winner ;
     }
 }

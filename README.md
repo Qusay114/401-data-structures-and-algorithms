@@ -223,3 +223,58 @@ Example :
 
         new App().validateBrackets("{}{Code}[Fellows](()")  //it will return false
         new App().validateBrackets("{}{Code}[Fellows](())") //it will return true
+
+
+### 15. [Challenge 15 (Trees Data Structure)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Trees-Challenge/app/src/main/java) :
+
+#### Binary Tree  :
+<!-- Short summary or background information -->
+a data structure to hold the data in tree representation , where each node can have the most two childs nodes 
+#### Binary Search Tree  :
+<!-- Short summary or background information -->
+a data structure to hold the data in tree representation , where each node can have the most two childs nodes , but we add the data here in a sorted way
+
+#### Challenge :
+<!-- Description of the challenge -->
+* Binary Tree:
+Create a Binary Tree class
+Define a method for each of the depth first traversals:
+pre order
+in order
+post order which returns an array of the values, ordered appropriately.
+
+* Binary Search Tree:
+Create a Binary Search Tree class
+This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:
+Add
+Arguments: value
+Return: nothing
+Adds a new node with that value in the correct location in the binary search tree.
+Contains
+Argument: value
+Returns: boolean indicating whether or not the value is in the tree at least once.
+
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Trees-Challenge/app/src/main/java/CodeChallenge-11.png)
+
+
+## Run The Program :
+you can instantiate BinaryTree or BinarySearchTree object , then add data to it .
+
+Example :
+
+        //for BinaryTree
+        BinaryTree binaryTree = new BinaryTree() ;
+        binaryTree.setRoot(new Node("10"));
+        binaryTree.getRoot().setLeft(new Node("20"));
+        binaryTree.getRoot().setRight(new Node("30"));
+        binaryTree.postOrderTraversals(binaryTree.getRoot());
+        binaryTree.preOrderTraversals(binaryTree.getRoot());
+        binaryTree.inOrderTraversals(binaryTree.getRoot());
+
+        //for BinarySearchTree
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.add(10);
+        binarySearchTree.add(20);
+        binarySearchTree.add(30);
