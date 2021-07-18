@@ -10,7 +10,7 @@ public class QueueLinkedList<T> {
 
     public void enqueue(T data){
         Node<T> newNode = new Node(data);
-        if(this.back == null){
+        if(this.front == null){
             this.front = newNode ;
             this.back = newNode ;
             return;
@@ -23,6 +23,12 @@ public class QueueLinkedList<T> {
     public T dequeue(){
         if (this.front == null)
             return (T)"Exception";
+        if(this.front == this.back)
+        {
+            T data = this.front.getData();
+            this.front = this.back = null ;
+            return data ;
+        }
         Node previousFront = this.front ;
         this.front = this.front.getNext() ;
         previousFront.setNext(null);
