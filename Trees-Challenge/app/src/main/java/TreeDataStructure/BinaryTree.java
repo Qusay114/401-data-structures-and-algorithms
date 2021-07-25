@@ -6,6 +6,7 @@ import java.util.List;
 public class BinaryTree<T> {
     private  Node<T> root ;
     private List collection = new ArrayList();
+    private Integer maxValue ;
 
     public Node<T> getRoot() {
         return root;
@@ -40,5 +41,21 @@ public class BinaryTree<T> {
             this.collection.add(node.getData());
         }
         return this.collection.toString();
+    }
+
+    public Integer getMax() {
+        if (this.root == null) return null ;
+        this.maxValue = (Integer) this.root.getData();
+        Node current = this.root ;
+        checkMax(current);
+        return maxValue;
+    }
+    private void checkMax(Node node){
+        if(node != null) {
+            if ((Integer)node.getData() > this.maxValue) this.maxValue = (Integer) node.getData();
+            checkMax(node.getLeft());
+            this.collection.add(node.getData());
+            checkMax(node.getRight());
+        }
     }
 }

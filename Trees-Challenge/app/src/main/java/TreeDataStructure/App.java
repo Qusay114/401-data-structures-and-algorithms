@@ -3,15 +3,29 @@
  */
 package TreeDataStructure;
 
+import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.add(10);
-        binarySearchTree.add(20);
-        binarySearchTree.add(30);
+//        BinarySearchTree binarySearchTree = new BinarySearchTree();
+//        binarySearchTree.setRoot(new Node(-5));
+//        binarySearchTree.add(10);
+//        binarySearchTree.add(0);
+//        binarySearchTree.add(0);
+//        System.out.println(binarySearchTree.getMax());
+
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.setRoot(new Node(80));
+        binaryTree.getRoot().setLeft(new Node(50));
+        binaryTree.getRoot().setRight(new Node(90));
+        System.out.println(binaryTree.getMax());
+
+
     }
 }

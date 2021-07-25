@@ -67,4 +67,16 @@ class AppTest {
         assertEquals("[20, 30, 10]", binaryTree.postOrderTraversals(binaryTree.getRoot()));
     }
 
+    @DisplayName("Test get Max Method for Binary Tree Class")
+    @Test
+    public void testMaxBinaryTree(){
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.setRoot(new Node(80));
+        binaryTree.getRoot().setLeft(new Node(100));
+        binaryTree.getRoot().setRight(new Node(90));
+        assertEquals(100 , binaryTree.getMax() , "it should return 100");
+    }
+
+
+
 }

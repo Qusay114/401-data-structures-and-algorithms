@@ -278,3 +278,35 @@ Example :
         binarySearchTree.add(10);
         binarySearchTree.add(20);
         binarySearchTree.add(30);
+
+
+
+### 16. [Challenge 16 (Binary Tree Max Value)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Tree-Challenge/app/src/main/java) :
+
+#### Max Value in the Binary Tree:
+<!-- Short summary or background information -->
+a method called getMax() inside BinaryTree and BinaryTreeSearch classes to get the max value in the tree
+#### Challenge :
+<!-- Description of the challenge -->
+Write the following method for the Binary Tree class
+
+find maximum value
+Arguments: none
+Returns: number
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Tree-Challenge/app/src/main/java/CodeChallenge-16.png)
+
+
+## Run The Program :
+you can create an instance of BinaryTree , and call getMax method
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run
+
+Example :
+
+                BinaryTree binaryTree = new BinaryTree();
+                binaryTree.setRoot(new Node(80));
+                binaryTree.getRoot().setLeft(new Node(50));
+                binaryTree.getRoot().setRight(new Node(90));
+                System.out.println(binaryTree.getMax()); // 90
