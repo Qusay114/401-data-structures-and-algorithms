@@ -2,9 +2,21 @@ package TreeDataStructure;
 
 public class BinarySearchTree  extends BinaryTree{
 
+    private Integer max ;
+
+    @Override
+    public void setRoot(Node root) {
+        super.setRoot(root);
+        this.max = (Integer) root.getData();
+    }
 
     public void add(int data){
+        if(data > this.max) this.max = data ;
         Node current = super.getRoot();
+        if (current == null) {
+            super.setRoot(new Node(data));
+            return;
+        }
         traverse(current , data);
     }
     private void traverse(Node current , int data){
@@ -44,4 +56,8 @@ public class BinarySearchTree  extends BinaryTree{
         return containTraverse(current, data);
     }
 
+    @Override
+    public Integer getMax() {
+        return max;
+    }
 }
