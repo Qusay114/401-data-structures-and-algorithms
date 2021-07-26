@@ -310,3 +310,35 @@ Example :
                 binaryTree.getRoot().setLeft(new Node(50));
                 binaryTree.getRoot().setRight(new Node(90));
                 System.out.println(binaryTree.getMax()); // 90
+
+
+### 16. [Challenge 17 (Tree Breadth First Traverse)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Tree-Challenge/app/src/main/java) :
+
+#### Traverse on the tree using Breadth-First-Traverse approach :
+<!-- Short summary or background information -->
+a class called TreeBreadthFirst that has traverse method to traverse over the tree using Breadth-First-Traverse approach and return a list of its values .
+#### Challenge :
+<!-- Description of the challenge -->
+Write a function called breadth first
+Arguments: tree
+Return: list of all values in the tree, in the order they were encountered
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Tree-Challenge/app/src/main/java/CodeChallenge-17.png)
+
+
+## Run The Program :
+you can create an instance of BinaryTree , and call getMax method
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run
+
+Example :
+
+        BinaryTree binaryTree = new BinaryTree();
+
+        binaryTree.setRoot(new Node(80));
+        binaryTree.getRoot().setLeft(new Node(50));
+        binaryTree.getRoot().setRight(new Node(90));
+
+        TreeBreadthFirst treeBreadthFirst = new TreeBreadthFirst();
+        System.out.println(treeBreadthFirst.traverse(binaryTree.getRoot())); // it will return [80,50,90]
