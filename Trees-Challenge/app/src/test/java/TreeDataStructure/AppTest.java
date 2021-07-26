@@ -78,5 +78,29 @@ class AppTest {
     }
 
 
+    @DisplayName("Test Tree Breadth First Traverse")
+    @Test
+    public void testFirstBreadthTraverse(){
+        TreeBreadthFirst treeBreadthFirst = new TreeBreadthFirst();
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.setRoot(new Node(80));
+        binaryTree.getRoot().setLeft(new Node(50));
+        binaryTree.getRoot().setRight(new Node(90));
+
+        binaryTree.getRoot().getRight().setRight(new Node(95));
+        binaryTree.getRoot().getRight().setLeft(new Node(96));
+
+        binaryTree.getRoot().getLeft().setLeft(new Node(100));
+        binaryTree.getRoot().getLeft().setRight(new Node(200));
+        binaryTree.getRoot().getLeft().getLeft().setRight(new Node(99));
+
+        binaryTree.getRoot().getRight().getRight().setLeft(new Node(77));
+        binaryTree.getRoot().getRight().getRight().setRight(new Node(88));
+
+        assertEquals("[80, 50, 90, 100, 200, 96, 95, 99, 77, 88]" , treeBreadthFirst.traverse(binaryTree.getRoot()).toString()
+                    , "it should return [80, 50, 90, 100, 200, 96, 95, 99, 77, 88]");
+    }
+
+
 
 }
