@@ -342,3 +342,6 @@ Example :
 
         TreeBreadthFirst treeBreadthFirst = new TreeBreadthFirst();
         System.out.println(treeBreadthFirst.traverse(binaryTree.getRoot())); // it will return [80,50,90]
+
+
+### 26. [Challenge 26 (Insertion Sort)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Insertion-Sort-Challenge/app/src/main/java) :
