@@ -3,9 +3,6 @@
  */
 package TreeDataStructure;
 
-import java.sql.Time;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class App {
     public String getGreeting() {
@@ -13,7 +10,13 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-
-
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.setRoot(new Node(1));
+        binarySearchTree.add(8);
+        binarySearchTree.add(5);
+        binarySearchTree.add(2);
+        binarySearchTree.add(5);
+        binarySearchTree.add(5);
+        System.out.println(binarySearchTree.getSumOddNums());
     }
 }

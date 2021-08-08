@@ -3,6 +3,7 @@ package TreeDataStructure;
 public class BinarySearchTree  extends BinaryTree{
 
     private Integer max ;
+    private Integer sumOdd ;
 
     @Override
     public void setRoot(Node root) {
@@ -59,5 +60,21 @@ public class BinarySearchTree  extends BinaryTree{
     @Override
     public Integer getMax() {
         return max;
+    }
+
+    public Integer getSumOddNums(){
+        this.sumOdd = 0 ;
+        sumOddsPreOrder(super.getRoot());
+        return this.sumOdd ;
+    }
+
+    private void sumOddsPreOrder(Node node){
+        if(node != null) {
+            System.out.println(((Integer) node.getData()) % 2);
+            if (((Integer) node.getData()) % 2 != 0)
+                this.sumOdd += (Integer) node.getData();
+            sumOddsPreOrder(node.getLeft());
+            sumOddsPreOrder(node.getRight());
+        }
     }
 }
