@@ -3,12 +3,24 @@
  */
 package MergeSort.Challenge;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        List<Integer> test = new ArrayList<>();
+        Sort sort = new Sort() ;
+        test.add(8);
+        test.add(4);
+        test.add(23);
+        test.add(42);
+        test.add(16);
+        test.add(15);
+        System.out.println(sort.mergeSort(test).toString());
     }
 }
