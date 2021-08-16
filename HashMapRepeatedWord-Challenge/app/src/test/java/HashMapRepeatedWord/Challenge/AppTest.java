@@ -62,4 +62,33 @@ class AppTest {
         assertTrue(hashTable.hashCode("white") > 0 , "it should return true");
     }
 
+    @DisplayName("test repeated word")
+    @Test
+    public void testRepeatedWord(){
+        RepeatedWords repeatedWords = new RepeatedWords();
+        String text = "It was the best of times, it was the worst of times, it was the age of wisdom, " +
+                "it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, " +
+                "it was the season of Light, it was the season of Darkness, it was the spring of hope, " +
+                "it was the winter of despair, we had everything before us, we had nothing before us, " +
+                "we were all going direct to Heaven, we were all going direct the other way – in short, " +
+                "the period was so far like the present period, that some of its noisiest authorities insisted on its being received, " +
+                "for good or for evil, in the superlative degree of comparison only..." ;
+        assertEquals(repeatedWords.firstRepeatedWord(text) , "it" , "it should return it");
+    }
+
+    @DisplayName("test repeat in the last of the text")
+    @Test
+    public void testRepeatLastWord(){
+        RepeatedWords repeatedWords = new RepeatedWords();
+        String text = "first second third third";
+        assertEquals(repeatedWords.firstRepeatedWord(text) , "third" , "it should return third");
+    }
+
+    @DisplayName("test a case where there is no repeated word")
+    @Test
+    public void testNoRepeatedWords(){
+        RepeatedWords repeatedWords = new RepeatedWords();
+        String text = "a b c d f g k" ;
+        assertEquals(repeatedWords.firstRepeatedWord(text) , "no repeated words");
+    }
 }
