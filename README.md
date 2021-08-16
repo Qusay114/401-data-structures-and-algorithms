@@ -392,4 +392,29 @@ Example :
 
 
 
+### 31. [Challenge 31 (Repeated Word)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapRepeatedWord-Challenge/app/src/main/java/HashMapRepeatedWord/Challenge/RepeatedWords.java) :
+
+#### HashTable :
+<!-- Short summary or background information -->
+this challenge to get the first repeated word from a string 
+#### Challenge :
+<!-- Description of the challenge -->
+Write a function called repeated word that finds the first word to occur more than once in a string
+Arguments: string
+Return: string
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapRepeatedWord-Challenge/app/src/main/java/CodeChallenge-31.png)
+
+
+## Run The Program :
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run
+
+Example :
+
+                RepeatedWords repeatedWords = new RepeatedWords();
+                String text = "first second  third second second" ;
+                System.out.println(repeatedWords.firstRepeatedWord(text));
+
 
