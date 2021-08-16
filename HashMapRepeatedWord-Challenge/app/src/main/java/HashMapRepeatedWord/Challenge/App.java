@@ -20,7 +20,9 @@ public class App {
         hashTable.add("green" , 3);
         hashTable.add("blue" , 4);
         System.out.println(hashTable.remove("blue"));
-        System.out.println(hashTable.get("blue"));
+        System.out.println(hashTable.get("green"));
+
+        System.out.println(hashTable.contains("black"));
 
         RepeatedWords repeatedWords = new RepeatedWords();
         String text = "first second  third second second" ;

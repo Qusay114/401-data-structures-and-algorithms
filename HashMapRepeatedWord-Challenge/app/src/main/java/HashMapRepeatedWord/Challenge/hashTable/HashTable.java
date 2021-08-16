@@ -18,7 +18,7 @@ public class HashTable<K , V> {
             bucketArray.add(null);
     }
 
-    private int hashCode(K key){
+    public int hashCode(K key){
         return Objects.hashCode(key);
     }
 
@@ -112,5 +112,19 @@ public class HashTable<K , V> {
         else
             bucketArray.set(bucketIndex , head.getNext());
         return head.getValue() ;
+    }
+
+    public Boolean contains(K key){
+        int bucketIndex = getBucketIndex(key);
+        int hashCode = hashCode(key);
+        HashNode<K , V> head = bucketArray.get(bucketIndex);
+
+        while (head != null){
+            if(head.getKey().equals(key) && head.getHashcode() == hashCode)
+                return true;
+        head = head.getNext();
+    }
+
+        return false ;
     }
 }
