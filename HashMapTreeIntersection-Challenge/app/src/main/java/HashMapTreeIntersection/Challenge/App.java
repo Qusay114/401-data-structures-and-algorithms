@@ -3,12 +3,27 @@
  */
 package HashMapTreeIntersection.Challenge;
 
+import HashMapTreeIntersection.Challenge.binaryTree.BinaryTree;
+import HashMapTreeIntersection.Challenge.binaryTree.Node;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        BinaryTree tree1 = new BinaryTree();
+        tree1.setRoot(new Node(5));
+        tree1.getRoot().setLeft(new Node(10));
+        tree1.getRoot().setRight(new Node(15));
+
+        BinaryTree tree2 = new BinaryTree();
+        tree2.setRoot(new Node(5));
+        tree2.getRoot().setLeft(new Node(11));
+        tree2.getRoot().setRight(new Node(15));
+
+        TreeIntersection intersection = new TreeIntersection();
+        System.out.println(intersection.hashmapTreeIntersection(tree1 , tree2));
+
     }
 }
