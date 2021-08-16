@@ -347,7 +347,7 @@ Example :
 ### 26. [Challenge 26 (Insertion Sort)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Insertion-Sort-Challenge/app/src/main/java) :
 
 
-### 30. [Challenge 30 (HashTable)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapRepeatedWord-Challenge/app/src/main/java/HashMapRepeatedWord.Challenge/hashTable) :
+### 30. [Challenge 30 (HashTable)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapRepeatedWord-Challenge/app/src/main/java/HashMapRepeatedWord/Challenge/hashTable) :
 
 #### HashTable :
 <!-- Short summary or background information -->
