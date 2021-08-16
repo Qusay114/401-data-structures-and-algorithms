@@ -3,12 +3,63 @@
  */
 package HashMapRepeatedWord.Challenge;
 
+import HashMapRepeatedWord.Challenge.hashTable.HashTable;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    private HashTable<String , Integer> hashTable ;
+    @BeforeEach
+    public void setUp(){
+        hashTable = new HashTable<>();
+        hashTable.add("white" , 1);
+        hashTable.add("black" , 2);
+        hashTable.add("green" , 3);
+        hashTable.add("blue" , 4);
     }
+
+    @DisplayName("test adding a key/value to the hashTable")
+    @Test
+    public void testAddKeyValue(){
+        hashTable.add("yellow" , 5);
+        assertEquals(hashTable.get("yellow") , 5 , "it should return 5");
+    }
+
+    @DisplayName("test get value from the hashTable")
+    @Test
+    public void testGetValue(){
+        assertEquals(hashTable.get("blue") , 4 , "it should return 4");
+    }
+
+    @DisplayName("test return a null in case the key doesn't exist")
+    @Test
+    public void testGetValueNotExist(){
+        assertNull(hashTable.get("test"), "it should return null");
+    }
+
+    @DisplayName("test handling a collision")
+    @Test
+    public void testHandlingACollision(){
+        hashTable.add("white" , 7);
+        assertEquals(hashTable.get("white") , 7 , "it should return 7");
+    }
+
+    @DisplayName("test retrieving a value from the bucket")
+    @Test
+    public void testRetrieveValueAfterCollision(){
+        hashTable.add("red" , 12);
+        hashTable.add("red" , 14);
+        assertEquals(hashTable.get("red") , 14 , "it should return 14");
+    }
+
+    @DisplayName("test get a hashCode for a key")
+    @Test
+    public void testGetHashCode(){
+        hashTable.add("white" , 7);
+        assertTrue(hashTable.hashCode("white") > 0 , "it should return true");
+    }
+
 }

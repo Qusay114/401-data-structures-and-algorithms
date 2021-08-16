@@ -345,3 +345,51 @@ Example :
 
 
 ### 26. [Challenge 26 (Insertion Sort)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Insertion-Sort-Challenge/app/src/main/java) :
+
+
+### 30. [Challenge 30 (HashTable)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapRepeatedWord-Challenge/app/src/main/java/HashMapRepeatedWord.Challenge/hashTable) :
+
+#### HashTable :
+<!-- Short summary or background information -->
+ HashTable data structure to hold the data as key / value pairs , and has hashCode , add , get , remove and contains methods
+#### Challenge :
+<!-- Description of the challenge -->
+Implement a Hashtable Class with the following methods:
+
+add
+Arguments: key, value
+Returns: nothing
+This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+get
+Arguments: key
+Returns: Value associated with that key in the table
+contains
+Arguments: key
+Returns: Boolean, indicating if the key exists in the table already.
+hash
+Arguments: key
+Returns: Index in the collection for that key
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapRepeatedWord-Challenge/app/src/main/java/CodeChallenge-30.png)
+
+
+## Run The Program :
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run
+
+Example :
+
+                HashTable<String , Integer> hashTable = new HashTable<>();
+                hashTable.add("white" , 1);
+                hashTable.add("black" , 2);
+                hashTable.add("green" , 3);
+                hashTable.add("blue" , 4);
+                System.out.println(hashTable.remove("blue"));
+                System.out.println(hashTable.get("green"));
+        
+                System.out.println(hashTable.contains("black"));
+
+
+
+
