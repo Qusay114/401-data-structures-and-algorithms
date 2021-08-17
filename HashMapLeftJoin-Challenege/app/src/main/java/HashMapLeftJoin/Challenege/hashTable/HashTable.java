@@ -1,6 +1,7 @@
 package HashMapLeftJoin.Challenege.hashTable;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class HashTable<K , V> {
@@ -125,5 +126,12 @@ public class HashTable<K , V> {
     }
 
         return false ;
+    }
+
+    public List<K> getKeys(){
+        List<K> keys = new ArrayList<>();
+        for (HashNode<K ,V> bucket : bucketArray)
+            if (bucket != null) keys.add(bucket.getKey()) ;
+        return keys ;
     }
 }
