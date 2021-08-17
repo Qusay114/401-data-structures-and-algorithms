@@ -3,12 +3,28 @@
  */
 package HashMapTreeIntersection.Challenge;
 
+import HashMapTreeIntersection.Challenge.binaryTree.BinaryTree;
+import HashMapTreeIntersection.Challenge.binaryTree.Node;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    @DisplayName("test the intersection between two array")
+    @Test
+    public void testIntersectionTrees(){
+        BinaryTree tree1 = new BinaryTree();
+        tree1.setRoot(new Node(5));
+        tree1.getRoot().setLeft(new Node(10));
+        tree1.getRoot().setRight(new Node(15));
+
+        BinaryTree tree2 = new BinaryTree();
+        tree2.setRoot(new Node(5));
+        tree2.getRoot().setLeft(new Node(11));
+        tree2.getRoot().setRight(new Node(15));
+
+        TreeIntersection intersection = new TreeIntersection();
+        assertEquals("[5, 15]" , intersection.hashmapTreeIntersection(tree1 , tree2).toString());
     }
 }

@@ -418,3 +418,42 @@ Example :
                 System.out.println(repeatedWords.firstRepeatedWord(text));
 
 
+
+
+### 32. [Challenge 32 (Trees intersections)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapTreeIntersection-Challenge/app/src/main/java/HashMapTreeIntersection/Challenge/TreeIntersection.java) :
+
+#### HashTable :
+<!-- Short summary or background information -->
+to find the intersections between two trees
+#### Challenge :
+<!-- Description of the challenge -->
+Find all values found to be in 2 binary trees
+
+Write a function called tree intersection
+Arguments: two binary trees
+Return: array
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapTreeIntersection-Challenge/app/src/main/java/CodeChallenge-32.png)
+
+
+## Run The Program :
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run
+
+Example :
+
+                        BinaryTree tree1 = new BinaryTree();
+                        tree1.setRoot(new Node(5));
+                        tree1.getRoot().setLeft(new Node(10));
+                        tree1.getRoot().setRight(new Node(15));
+                
+                        BinaryTree tree2 = new BinaryTree();
+                        tree2.setRoot(new Node(5));
+                        tree2.getRoot().setLeft(new Node(11));
+                        tree2.getRoot().setRight(new Node(15));
+                
+                        TreeIntersection intersection = new TreeIntersection();
+                        System.out.println(intersection.hashmapTreeIntersection(tree1 , tree2));
+
+
