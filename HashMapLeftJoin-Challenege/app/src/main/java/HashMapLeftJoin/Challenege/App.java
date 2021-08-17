@@ -3,12 +3,26 @@
  */
 package HashMapLeftJoin.Challenege;
 
+import HashMapLeftJoin.Challenege.hashTable.HashTable;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        HashTable<String , Integer> leftMap = new HashTable<>();
+        leftMap.add("a" , 1);
+        leftMap.add("b" , 2);
+        leftMap.add("c" , 3);
+
+        HashTable<String , Integer> rightMap = new HashTable<>();
+        rightMap.add("a" , 10);
+        rightMap.add("d" , 20);
+        rightMap.add("c" , 30);
+
+        JoinHashMap joinHashMap = new JoinHashMap();
+        System.out.println(joinHashMap.leftJoinHashMaps(leftMap , rightMap).toString());
     }
 }

@@ -464,3 +464,41 @@ Example :
                         System.out.println(intersection.hashmapTreeIntersection(tree1 , tree2));
 
 
+
+
+### 33. [Challenge 33 (Left Joins)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapTreeIntersection-Challenge/app/src/main/java/HashMapTreeIntersection/Challenge/TreeIntersection.java) :
+
+
+#### Challenge :
+<!-- Description of the challenge -->
+Write a function called left join
+Arguments: two hash maps
+The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+Return: The returned data structure that holds the results is up to you.
+It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
+
+#### Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapTreeIntersection-Challenge/app/src/main/java/CodeChallenge-33.png)
+
+
+## Run The Program :
+* RUN THE TESTS USING gradle test
+* RUN THE APP USING gradle run
+
+Example :
+
+                HashTable<String , Integer> leftMap = new HashTable<>();
+                leftMap.add("a" , 1);
+                leftMap.add("b" , 2);
+                leftMap.add("c" , 3);
+        
+                HashTable<String , Integer> rightMap = new HashTable<>();
+                rightMap.add("a" , 10);
+                rightMap.add("d" , 20);
+                rightMap.add("c" , 30);
+        
+                JoinHashMap joinHashMap = new JoinHashMap();
+                System.out.println(joinHashMap.leftJoinHashMaps(leftMap , rightMap).toString());
+
+
