@@ -466,7 +466,7 @@ Example :
 
 
 
-### 33. [Challenge 33 (Left Joins)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapTreeIntersection-Challenge/app/src/main/java/HashMapTreeIntersection/Challenge/TreeIntersection.java) :
+### 33. [Challenge 33 (Left Joins)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapLeftJoin-Challenge/app/src/main/java/HashMapLeftJoin/Challenge/JoinHashMap.java) :
 
 
 #### Challenge :
