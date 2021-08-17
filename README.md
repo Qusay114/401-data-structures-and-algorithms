@@ -345,6 +345,13 @@ Example :
 
 
 ### 26. [Challenge 26 (Insertion Sort)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Insertion-Sort-Challenge/app/src/main/java) :
+#### [BLOG](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Insertion-Sort-Challenge/BLOG.md)
+
+### 27. [Challenge 27 (Merge Sort)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/MergeSort-Challenge/app/src/main/java) :
+#### [BLOG](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/MergeSort-Challenge/BLOG.md)
+
+### 28. [Challenge 28 (Quick Sort)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/QuickSort-Challenge/app/src/main/java) :
+#### [BLOG](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/QuickSort-Challenge/BLOG.md)
 
 
 ### 30. [Challenge 30 (HashTable)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapRepeatedWord-Challenge/app/src/main/java/HashMapRepeatedWord/Challenge/hashTable) :
