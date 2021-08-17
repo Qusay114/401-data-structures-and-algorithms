@@ -466,7 +466,7 @@ Example :
 
 
 
-### 33. [Challenge 33 (Left Joins)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapTreeIntersection-Challenge/app/src/main/java/HashMapTreeIntersection/Challenge/TreeIntersection.java) :
+### 33. [Challenge 33 (Left Joins)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapLeftJoin-Challenge/app/src/main/java/HashMapLeftJoin/Challenge/JoinHashMap.java) :
 
 
 #### Challenge :
@@ -479,7 +479,7 @@ Return: The returned data structure that holds the results is up to you.
 It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
 
 #### Whiteboard Process
-[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapTreeIntersection-Challenge/app/src/main/java/CodeChallenge-33.png)
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/HashMapLeftJoin-Challenge/app/src/main/java/CodeChallenge-33.png)
 
 
 ## Run The Program :
