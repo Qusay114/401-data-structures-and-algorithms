@@ -23,6 +23,16 @@ public class App {
         rightMap.add("c" , 30);
 
         JoinHashMap joinHashMap = new JoinHashMap();
-        System.out.println(joinHashMap.leftJoinHashMaps(leftMap , rightMap).toString());
+//        System.out.println(joinHashMap.leftJoinHashMaps(leftMap , rightMap).toString());
+
+
+        Unique unique = new Unique();
+        String text1 = "The quick brown fox jumps over the lazy dog";
+        String text2 = "I love cats";
+        String text3 = "Donald the duck" ;
+        System.out.println(unique.uniqueChars(text1));
+        System.out.println(unique.uniqueChars(text2));
+        unique.uniqueChars(text3);
+        System.out.println(unique.uniqueChars(text3));
     }
 }

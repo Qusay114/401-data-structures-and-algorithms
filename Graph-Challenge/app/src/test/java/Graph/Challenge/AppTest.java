@@ -3,12 +3,103 @@
  */
 package Graph.Challenge;
 
+import LinkedList.LinkedList;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    @DisplayName("test add node to the graph")
+    @Test
+    public void testAddNodeToGraph(){
+        Graph graph = new Graph();
+        graph.addVertex("Qusay") ;
+        assertTrue(graph.toString().contains("Qusay"));
     }
+
+    @DisplayName("test add edge to the graph")
+    @Test
+    public void testAddEdgeToGraph(){
+        Graph graph = new Graph();
+        graph.addVertex("Qusay");
+        graph.addVertex("Ali");
+        graph.addEdge("Qusay" , "Ali");
+        assertTrue(graph.getNeighbors("Qusay").toString().contains("Ali"));
+        assertTrue(graph.getNeighbors("Ali").toString().contains("Qusay"));
+    }
+
+    @DisplayName("test retrieve all nodes from the graph")
+    @Test
+    public void testRetrieveNodesGraph(){
+        Graph graph = new Graph();
+        graph.addVertex("Qusay");
+        graph.addVertex("Ali");
+        graph.addVertex("Hadi");
+        graph.addVertex("Jafar");
+
+        graph.addEdge("Qusay" , "Ali");
+        graph.addEdge("Qusay" , "Hadi");
+        graph.addEdge("Qusay" , "Jafar");
+
+        LinkedList<String> linkedList = new LinkedList<String>();
+        linkedList.append("Qusay");
+        linkedList.append("Ali");
+        linkedList.append("Hadi");
+        linkedList.append("Jafar");
+
+        assertEquals(graph.bft("Qusay").toString() , linkedList.toString());
+    }
+
+    @DisplayName("test retrieve neighborhoods of a specific vertex")
+    @Test
+    public void testRetrieveNeighborhoods(){
+        Graph graph = new Graph();
+        graph.addVertex("Qusay");
+        graph.addVertex("Ali");
+        graph.addVertex("Hadi");
+        graph.addVertex("Jafar");
+
+        graph.addEdge("Qusay" , "Ali");
+        graph.addEdge("Qusay" , "Hadi");
+        graph.addEdge("Qusay" , "Jafar");
+
+
+        List<Vertex<String>> neighborhoods = new ArrayList<>();
+        neighborhoods.add(new Vertex<>("Ali"));
+        neighborhoods.add(new Vertex<>("Hadi"));
+        neighborhoods.add(new Vertex<>("Jafar"));
+
+        assertEquals(graph.getNeighbors("Qusay").toString() , neighborhoods.toString());
+    }
+
+    @DisplayName("test size of the graph")
+    @Test
+    public void testSizeGraph(){
+        Graph graph = new Graph();
+        graph.addVertex("Qusay");
+        graph.addVertex("Ali");
+        graph.addVertex("Hadi");
+        graph.addVertex("Jafar");
+
+        graph.addEdge("Qusay" , "Ali");
+        graph.addEdge("Qusay" , "Hadi");
+        graph.addEdge("Qusay" , "Jafar");
+
+
+        assertEquals(graph.getSize() , 4);
+    }
+
+    @DisplayName("test retrieve empty graph")
+    @Test
+    public void testRetrieveEmptyGraph(){
+        Graph graph = new Graph();
+        assertNull(graph.bft("qusay"));
+        assertNull(graph.dft("qusay"));
+    }
+
 }

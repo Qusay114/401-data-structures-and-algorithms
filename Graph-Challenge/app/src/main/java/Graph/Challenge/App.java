@@ -9,6 +9,23 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        Graph graph = new Graph();
+        graph.addVertex("Qusay");
+        graph.addVertex("Ali");
+        graph.addVertex("Hadi");
+        graph.addVertex("Jafar");
+
+        graph.addEdge("Qusay" , "Ali");
+        graph.addEdge("Qusay" , "Hadi");
+        graph.addEdge("Qusay" , "Jafar");
+
+//        System.out.println(graph.toString());
+
+//        System.out.println(graph.bft("Qusay").toString());
+//        System.out.println(graph.dft("Qusay").toString());
+
+        System.out.println(graph.getNeighbors("Qusay"));
+
     }
 }
