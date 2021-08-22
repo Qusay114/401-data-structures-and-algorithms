@@ -504,7 +504,7 @@ Example :
 
 
 
-### 35. [Challenge 35 (Graph)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenege/app/src/main/java/Graph/Challenege/Graph.java) :
+### 35. [Challenge 35 (Graph)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/Graph/Challenge/Graph.java) :
 
 
 # Graphs
