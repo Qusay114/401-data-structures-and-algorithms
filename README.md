@@ -552,3 +552,5 @@ Include the weight of the connection in the returned collection
 
 * Arguments: none
 * Returns the total number of nodes in the graph
+
+### 35. [Challenge 36 (Graph Breath First)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/Graph/Challenge/Graph.java) :
