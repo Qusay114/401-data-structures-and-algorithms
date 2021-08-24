@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class BusinessTrip {
 
-    public Integer tripCost(Graph graph , List<String> cites){
+    public String tripCost(Graph graph , List<String> cites){
         Integer cost = 0 ;
         for (int i = 0 ; i < cites.size()-1 ; i++){
             Vertex<String> source = new Vertex<>(cites.get(i));
@@ -18,7 +18,7 @@ public class BusinessTrip {
                  cost += graph.getWeightedAdjVertices().get(source).get(dest) ;
         }
 
-        return cost ;
+        return cost > 0 ? "True, $" + cost : "False, $" + cost ;
 
 
     }
