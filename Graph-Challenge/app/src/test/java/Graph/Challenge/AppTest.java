@@ -173,4 +173,52 @@ class AppTest {
         assertEquals(trip.tripCost(graph , cities) , "False, $0" );
     }
 
+
+    @DisplayName("test dft with one vertex")
+    @Test
+    public void testDFTWithOneVertex(){
+        Graph graph = new Graph();
+        graph.addVertex("A");
+        assertEquals( "{ A } -> NULL", graph.dft("A").toString() );
+    }
+
+    @DisplayName("test dft with one edge")
+    @Test
+    public void testDFTWithOneEdge(){
+        Graph graph = new Graph();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addEdge("A" , "B");
+
+        assertEquals( "{ A } -> { B } -> NULL", graph.dft("A").toString() );
+    }
+
+    @DisplayName("test dft with multiEdges")
+    @Test
+    public void testDFTWithMultiEdges(){
+        Graph graph = new Graph();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+
+        graph.addEdge("A","D");
+        graph.addEdge("A","B");
+        graph.addEdge("B","D");
+        graph.addEdge("B","C");
+        graph.addEdge("C","G");
+        graph.addEdge("D","F");
+        graph.addEdge("D","H");
+        graph.addEdge("D","E");
+        graph.addEdge("F","H");
+
+        assertEquals( "{ A } -> { B } -> { C } -> { G } -> { D } -> { E } -> { H } -> { F } -> NULL",
+                graph.dft("A").toString() );
+    }
+
+
 }

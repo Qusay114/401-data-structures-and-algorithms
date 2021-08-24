@@ -15,15 +15,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        Graph graph = new Graph();
-        graph.addVertex("Qusay");
-        graph.addVertex("Ali");
-        graph.addVertex("Hadi");
-        graph.addVertex("Jafar");
-
-        graph.addEdge("Qusay" , "Ali");
-        graph.addEdge("Qusay" , "Hadi");
-        graph.addEdge("Qusay" , "Jafar");
+//        Graph graph = new Graph();
+//        graph.addVertex("Qusay");
+//        graph.addVertex("Ali");
+//        graph.addVertex("Hadi");
+//        graph.addVertex("Jafar");
+//
+//        graph.addEdge("Qusay" , "Ali");
+//        graph.addEdge("Qusay" , "Hadi");
+//        graph.addEdge("Qusay" , "Jafar");
 
 //        System.out.println(graph.toString());
 
@@ -32,26 +32,50 @@ public class App {
 
 //        System.out.println(graph.getNeighbors("Qusay"));
 
-        graph.addVertex("Amman") ;
-        graph.addVertex("Mafraq") ;
-        graph.addVertex("Zarqa");
-        graph.addVertex("Irbid");
+//        graph.addVertex("Amman") ;
+//        graph.addVertex("Mafraq") ;
+//        graph.addVertex("Zarqa");
+//        graph.addVertex("Irbid");
+//
+//        graph.addWeightedEdge("Mafraq" , "Zarqa" , 10);
+//        graph.addWeightedEdge("Mafraq" , "Amman" , 35);
+//        graph.addWeightedEdge("Amman" , "Zarqa" , 15);
+//        graph.addWeightedEdge("Mafraq" ,"Irbid" , 17);
+//
+////        System.out.println(graph.getWeightedGraph());
+//
+//        BusinessTrip businessTrip = new BusinessTrip();
+//        List<String> cities = new ArrayList<>();
+//        cities.add("Amman");
+//        cities.add("Zarqa") ;
+//        cities.add("Mafraq");
+//        cities.add("Irbid");
+//
+//        System.out.println(businessTrip.tripCost(graph , cities));
 
-        graph.addWeightedEdge("Mafraq" , "Zarqa" , 10);
-        graph.addWeightedEdge("Mafraq" , "Amman" , 35);
-        graph.addWeightedEdge("Amman" , "Zarqa" , 15);
-        graph.addWeightedEdge("Mafraq" ,"Irbid" , 17);
 
-//        System.out.println(graph.getWeightedGraph());
+        Graph graph = new Graph();
 
-        BusinessTrip businessTrip = new BusinessTrip();
-        List<String> cities = new ArrayList<>();
-        cities.add("Amman");
-        cities.add("Zarqa") ;
-        cities.add("Mafraq");
-        cities.add("Irbid");
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
 
-        System.out.println(businessTrip.tripCost(graph , cities));
+        graph.addEdge("A","D");
+        graph.addEdge("A","B");
+        graph.addEdge("B","D");
+        graph.addEdge("B","C");
+        graph.addEdge("C","G");
+        graph.addEdge("D","F");
+        graph.addEdge("D","H");
+        graph.addEdge("D","E");
+        graph.addEdge("F","H");
+
+        System.out.println(graph.dft("A").toString());
 
 
     }
