@@ -552,7 +552,7 @@ Include the weight of the connection in the returned collection
 * Arguments: none
 * Returns the total number of nodes in the graph
 
-### 36. [Challenge 36 (Graph Breath First)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/GraphBusinessTrip/BusinessTrip.java) :
+### 36. [Challenge 36 (Graph Breath First)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/Graph/Challenge/Graph.java) :
 
 Write the following method for the Graph class:
 
@@ -569,6 +569,65 @@ Write the following method for the Graph class:
 
 Traversing starts from a selected node (root) and traverse the graph exploring the neighbour nodes (connected to root).
 Moving towards the next-level neighbour nodes.
+
+Big (O)
+
+Time Complexity : O(n+e)
+space Complexity : O(n)
+
+
+
+### 37. [Challenge 37 (Business Trip)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/GraphBusinessTrip/BusinessTrip.java) :
+
+Write a function called business trip:
+
+* Arguments: graph, array of city names
+* Return: cost or null
+* Determine whether the trip is possible with direct flights, and how much it would cost.
+
+
+## Approach & Efficiency
+A Graph is called weighted graph when it has weighted edges which means there are some cost associated with each edge in graph.
+
+Implementation:
+
+Each edge of a graph has an associated numerical value, called a weight.
+Usually, the edge weights are nonnegative integers.
+Weighted graphs may be either directed or undirected.
+The weight of an edge is often referred to as the “cost” of the edge.
+Will create an Edge class to put weight on each edge
+
+Big (O)
+
+Time Complexity : O(n+e)
+space Complexity : O(n)
+
+
+### 38. [Challenge 38 (Graph Depth First)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/Graph/Challenge/Graph.java) :
+
+Write the following method for the Graph class:
+
+depth first
+
+* Arguments: Node (Starting point of search)
+* Return: A collection of nodes in their pre-order depth-first traversal order
+* Display the collection
+
+
+## Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/CodeChallenge-38.jpg)
+
+
+
+## Approach & Efficiency
+
+* Traversing starts at the root node and explores as far as possible along each branch before backtracking.
+
+* Create a recursive function that takes the index of the node and a visited array.
+
+* Mark the current node as visited and print the node.
+
+* Traverse all the adjacent and unmarked nodes and call the recursive function with the index of the adjacent node.
 
 Big (O)
 
