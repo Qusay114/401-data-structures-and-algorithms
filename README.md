@@ -517,7 +517,6 @@ Here is some common terminology used when working with Graphs:
 3- Neighbor - The neighbors of a node are its adjacent nodes, i.e., are connected via an edge.
 4- Degree - The degree of a vertex is the number of edges connected to that vertex.
 
-## Challenge 35
 **Features**
 
 Implement your own Graph. The graph should be represented as an adjacency list, and should include the following methods:
@@ -553,4 +552,25 @@ Include the weight of the connection in the returned collection
 * Arguments: none
 * Returns the total number of nodes in the graph
 
-### 35. [Challenge 36 (Graph Breath First)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/Graph/Challenge/Graph.java) :
+### 36. [Challenge 36 (Graph Breath First)](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/GraphBusinessTrip/BusinessTrip.java) :
+
+Write the following method for the Graph class:
+
+* breadth first
+* Arguments: Node
+* Return: A collection of nodes in the order they were visited.
+* Display the collection
+
+## Whiteboard Process
+[whiteboard](https://github.com/Qusay114/401-data-structures-and-algorithms/tree/main/Graph-Challenge/app/src/main/java/CodeChallenge-36.jpg)
+
+
+## Approach & Efficiency
+
+Traversing starts from a selected node (root) and traverse the graph exploring the neighbour nodes (connected to root).
+Moving towards the next-level neighbour nodes.
+
+Big (O)
+
+Time Complexity : O(n+e)
+space Complexity : O(n)

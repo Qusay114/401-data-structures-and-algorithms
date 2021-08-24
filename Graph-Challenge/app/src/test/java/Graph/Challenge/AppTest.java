@@ -3,6 +3,7 @@
  */
 package Graph.Challenge;
 
+import GraphBusinessTrip.BusinessTrip;
 import LinkedList.LinkedList;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -100,6 +101,76 @@ class AppTest {
         Graph graph = new Graph();
         assertNull(graph.bft("qusay"));
         assertNull(graph.dft("qusay"));
+    }
+
+    @DisplayName("test a direct business trip")
+    @Test
+    public void testDirectTrip(){
+        BusinessTrip trip = new BusinessTrip();
+        Graph graph = new Graph();
+
+        graph.addVertex("Amman") ;
+        graph.addVertex("Mafraq") ;
+        graph.addVertex("Zarqa");
+        graph.addVertex("Irbid");
+
+        graph.addWeightedEdge("Mafraq" , "Zarqa" , 10);
+        graph.addWeightedEdge("Mafraq" , "Amman" , 35);
+        graph.addWeightedEdge("Amman" , "Zarqa" , 15);
+        graph.addWeightedEdge("Mafraq" ,"Irbid" , 17);
+
+        List<String> cities = new ArrayList<>();
+        cities.add("Mafraq");
+        cities.add("Zarqa") ;
+
+        assertEquals(trip.tripCost(graph , cities) , "True, $10" );
+    }
+
+    @DisplayName("test a no direct business trip")
+    @Test
+    public void testNonDirectTrip(){
+        BusinessTrip trip = new BusinessTrip();
+        Graph graph = new Graph();
+
+        graph.addVertex("Amman") ;
+        graph.addVertex("Mafraq") ;
+        graph.addVertex("Zarqa");
+        graph.addVertex("Irbid");
+
+        graph.addWeightedEdge("Mafraq" , "Zarqa" , 10);
+        graph.addWeightedEdge("Mafraq" , "Amman" , 35);
+        graph.addWeightedEdge("Amman" , "Zarqa" , 15);
+        graph.addWeightedEdge("Mafraq" ,"Irbid" , 17);
+
+        List<String> cities = new ArrayList<>();
+        cities.add("Mafraq");
+        cities.add("Zarqa") ;
+        cities.add("Amman");
+
+        assertEquals(trip.tripCost(graph , cities) , "True, $25" );
+    }
+
+    @DisplayName("test a non possible trip trip")
+    @Test
+    public void testNonPossibleTrip(){
+        BusinessTrip trip = new BusinessTrip();
+        Graph graph = new Graph();
+
+        graph.addVertex("Amman") ;
+        graph.addVertex("Mafraq") ;
+        graph.addVertex("Zarqa");
+        graph.addVertex("Irbid");
+
+        graph.addWeightedEdge("Mafraq" , "Zarqa" , 10);
+        graph.addWeightedEdge("Mafraq" , "Amman" , 35);
+        graph.addWeightedEdge("Amman" , "Zarqa" , 15);
+        graph.addWeightedEdge("Mafraq" ,"Irbid" , 17);
+
+        List<String> cities = new ArrayList<>();
+        cities.add("Amman");
+        cities.add("Irbid") ;
+
+        assertEquals(trip.tripCost(graph , cities) , "False, $0" );
     }
 
 }

@@ -11,16 +11,19 @@ import java.util.Map;
 
 public class Graph {
     private final Map<Vertex<String> , List<Vertex<String>>> adjVertices ;
+    private Map<Vertex<String>, Map<Vertex<String>, Integer>> weightedAdjVertices ;
     private int size ;
 
     public Graph(){
         this.adjVertices = new HashMap<>();
+        this.weightedAdjVertices = new HashMap<Vertex<String>, Map<Vertex<String>, Integer>>();
     }
 
     public Vertex<String> addVertex(String data){
         Vertex<String> vertex = new Vertex<>(data);
         //if the vertex doesn't exist then add it
         this.adjVertices.putIfAbsent(vertex , new ArrayList<>());
+//        this.weightedAdjVertices.putIfAbsent(vertex , new HashMap<>());
         return vertex ;
     }
 
@@ -33,6 +36,20 @@ public class Graph {
             this.adjVertices.get(vertex1).add(vertex2);
             //get vertex2 key then add vertex1 to its array list
             this.adjVertices.get(vertex2).add(vertex1);
+        }
+    }
+
+    public void addWeightedEdge(String vertexData1 , String vertexData2 , Integer weight){
+        Vertex<String> vertex1 = new Vertex<>(vertexData1);
+        Vertex<String> vertex2 = new Vertex<>(vertexData2);
+        //make sure that the two vertex exists , to create an edge between them
+        if (this.adjVertices.containsKey(vertex1) && this.adjVertices.containsKey(vertex2)) {
+            this.weightedAdjVertices.putIfAbsent(vertex1 , new HashMap<Vertex<String>, Integer>());
+            this.weightedAdjVertices.putIfAbsent(vertex2 , new HashMap<Vertex<String>, Integer>());
+            //get vertex1 key then add vertex2 to its array list
+            this.weightedAdjVertices.get(vertex1).put(vertex2 , weight);
+            //get vertex2 key then add vertex1 to its array list
+            this.weightedAdjVertices.get(vertex2).put(vertex1 , weight);
         }
     }
 
@@ -60,6 +77,10 @@ public class Graph {
     public List<Vertex<String>> getAdjVertices(String vertexData){
         Vertex<String> vertex = new Vertex<>(vertexData);
         return adjVertices.get(vertex);
+    }
+
+    public Map<Vertex<String>, Map<Vertex<String>, Integer>> getWeightedAdjVertices() {
+        return weightedAdjVertices;
     }
 
     public LinkedList<String> bft(String root){
@@ -114,6 +135,12 @@ public class Graph {
     public String toString() {
         return "Graph{" +
                 "adjVertices=" + adjVertices.toString() +
+                '}';
+    }
+
+    public String getWeightedGraph(){
+        return "Graph{" +
+                "adjVertices=" + weightedAdjVertices.toString() +
                 '}';
     }
 }

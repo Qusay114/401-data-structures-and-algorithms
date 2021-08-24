@@ -3,6 +3,11 @@
  */
 package Graph.Challenge;
 
+import GraphBusinessTrip.BusinessTrip;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -25,7 +30,29 @@ public class App {
 //        System.out.println(graph.bft("Qusay").toString());
 //        System.out.println(graph.dft("Qusay").toString());
 
-        System.out.println(graph.getNeighbors("Qusay"));
+//        System.out.println(graph.getNeighbors("Qusay"));
+
+        graph.addVertex("Amman") ;
+        graph.addVertex("Mafraq") ;
+        graph.addVertex("Zarqa");
+        graph.addVertex("Irbid");
+
+        graph.addWeightedEdge("Mafraq" , "Zarqa" , 10);
+        graph.addWeightedEdge("Mafraq" , "Amman" , 35);
+        graph.addWeightedEdge("Amman" , "Zarqa" , 15);
+        graph.addWeightedEdge("Mafraq" ,"Irbid" , 17);
+
+//        System.out.println(graph.getWeightedGraph());
+
+        BusinessTrip businessTrip = new BusinessTrip();
+        List<String> cities = new ArrayList<>();
+        cities.add("Amman");
+        cities.add("Zarqa") ;
+        cities.add("Mafraq");
+        cities.add("Irbid");
+
+        System.out.println(businessTrip.tripCost(graph , cities));
+
 
     }
 }
