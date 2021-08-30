@@ -16,21 +16,58 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        
 
-        BinaryTree<Integer> mergedTree = new BinaryTree<>();
-        BinaryTree<Integer> tree1 = new BinaryTree<>();
-        tree1.setRoot(new Node<>(1));
-        tree1.getRoot().setLeft(new Node<>(2));
-        tree1.getRoot().setRight(new Node<>(3));
-        BinaryTree<Integer> tree2 = new BinaryTree<>();
-        tree2.setRoot(new Node<>(1));
-        tree2.getRoot().setLeft(new Node<>(2));
-        tree2.getRoot().setRight(new Node<>(3));
-        traverseTwoTree(tree1.getRoot() , tree2.getRoot() , mergedTree.getRoot());
-        System.out.println(mergedTree.getRoot());
+//        BinarySearchTree binarySearchTree = new BinarySearchTree();
+//        binarySearchTree.setRoot(new Node(4));
+//        binarySearchTree.add(8);
+//        binarySearchTree.add(5);
+//        binarySearchTree.add(2);
+//        binarySearchTree.add(2);
+//        binarySearchTree.add(4);
+//
+//        BinarySearchTree binarySearchTree1 = new BinarySearchTree();
+//        binarySearchTree1.setRoot(new Node(4));
+//        binarySearchTree1.add(8);
+//        binarySearchTree1.add(5);
+//        binarySearchTree1.add(2);
+//        binarySearchTree1.add(2);
+//        binarySearchTree1.add(4);
+
+//        System.out.println(binarySearchTree.getSumOddNums());
+
+//        System.out.println(sumEven(binarySearchTree.getRoot()));
+//        System.out.println(countEvenNums(binarySearchTree.getRoot()));
+//        System.out.println(avgSumEven(binarySearchTree.getRoot()));
+
+//        System.out.println(isIdentical(binarySearchTree.getRoot() , binarySearchTree1.getRoot()));
+//        BinaryTree<Integer> mergedTree = mergeTrees(binarySearchTree , binarySearchTree1);
+//        System.out.println(mergedTree.getRoot().getData());
+//        System.out.println(mergedTree.getRoot().getLeft().getData());
+//        System.out.println(mergedTree.getRoot().getRight().getData());
 
 
+//        BinaryTree<Integer> mergedTree = new BinaryTree<>();
+//        BinaryTree<Integer> tree1 = new BinaryTree<>();
+//        tree1.setRoot(new Node<>(1));
+//        tree1.getRoot().setLeft(new Node<>(2));
+//        tree1.getRoot().setRight(new Node<>(3));
+//        BinaryTree<Integer> tree2 = new BinaryTree<>();
+//        tree2.setRoot(new Node<>(1));
+//        tree2.getRoot().setLeft(new Node<>(2));
+//        tree2.getRoot().setRight(new Node<>(3));
+//        traverseTwoTree(tree1.getRoot() , tree2.getRoot() , mergedTree.getRoot());
+//        System.out.println(mergedTree);
+
+        List<Integer> sortedList = new ArrayList<>();
+        sortedList.add(1);
+        sortedList.add(2);
+        sortedList.add(3);
+        sortedList.add(4);
+        BinarySearchTree tree = convertSortedListToBST(sortedList) ;
+        System.out.println(tree.getRoot().getData());
+        System.out.println(tree.getRoot().getLeft().getData());
+        System.out.println(tree.getRoot().getRight().getData());
+        System.out.println(tree.getRoot().getLeft().getLeft().getData());
 
 
     }
