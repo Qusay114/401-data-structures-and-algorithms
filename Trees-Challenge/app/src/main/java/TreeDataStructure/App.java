@@ -4,19 +4,153 @@
 package TreeDataStructure;
 
 
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) throws Exception {
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.setRoot(new Node(1));
-        binarySearchTree.add(8);
-        binarySearchTree.add(5);
-        binarySearchTree.add(2);
-        binarySearchTree.add(5);
-        binarySearchTree.add(5);
-        System.out.println(binarySearchTree.getSumOddNums());
+
+        
+
+        BinaryTree<Integer> mergedTree = new BinaryTree<>();
+        BinaryTree<Integer> tree1 = new BinaryTree<>();
+        tree1.setRoot(new Node<>(1));
+        tree1.getRoot().setLeft(new Node<>(2));
+        tree1.getRoot().setRight(new Node<>(3));
+        BinaryTree<Integer> tree2 = new BinaryTree<>();
+        tree2.setRoot(new Node<>(1));
+        tree2.getRoot().setLeft(new Node<>(2));
+        tree2.getRoot().setRight(new Node<>(3));
+        traverseTwoTree(tree1.getRoot() , tree2.getRoot() , mergedTree.getRoot());
+        System.out.println(mergedTree.getRoot());
+
+
+
+
     }
+
+    public static double sumEven(Node<Integer> node){
+        if (node == null){
+            return 0;
+        }else{
+            double sum = 0;
+
+            if ((node.getData()%2) ==0){
+                sum+= node.getData();
+            }
+
+            sum += sumEven(node.getRight());
+            sum += sumEven(node.getLeft());
+
+            return sum;
+        }
+    }
+
+    public static double avgSumEven(Node<Integer> node){
+        return sumEven(node) / countEvenNums(node);
+    }
+
+    public static int countEvenNums(Node<Integer> node){
+        if (node == null){
+            return 0;
+        }else{
+            int count =0;
+
+            if ((node.getData()%2) ==0){
+             count+=1 ;
+            }
+            count += countEvenNums(node.getLeft());
+            count += countEvenNums(node.getRight());
+            return count ;
+    }
+}
+
+    public int maxNode(Node<Integer> node){
+        if(node==null){
+            return 0;
+        }else{
+            int max = node.getData();
+            int LM = maxNode(node.getLeft());
+            int RM = maxNode(node.getRight());
+            if (LM > max){
+                max = LM;
+            }
+            if (RM> max){
+                max = RM;
+            }
+            return max;
+        }
+    }
+
+    public int maxNode1(Node<Integer> node){
+        int max = node.getData();
+        if(node==null){
+            return 0;
+        }else{
+            int LM = maxNode1(node.getLeft());
+            int RM = maxNode1(node.getRight());
+            if (LM > max){
+                max = LM;
+            }
+            if (RM> max){
+                max = RM;
+            }
+            return max;
+        }
+    }
+
+    //Check if two binary trees are identical or not
+
+    public static boolean isIdentical(Node<Integer> first, Node<Integer> second){
+        if (first == null && second == null){
+            return true;
+        }
+
+        return first != null && second != null && Objects.equals(first.getData(), second.getData()) &&
+                isIdentical(first.getLeft(), second.getLeft()) &&
+                isIdentical(first.getRight(), second.getRight());
+    }
+
+    public static BinaryTree<Integer> mergeTrees(BinaryTree<Integer> tree1 , BinaryTree<Integer> tree2){
+        BinaryTree<Integer> mergedTree = new BinaryTree<>();
+        mergedTree.setRoot(new Node<>(tree1.getRoot().getData() + tree2.getRoot().getData()));
+        traverseTwoTree(tree1.getRoot() , tree2.getRoot() , mergedTree.getRoot());
+        return mergedTree ;
+    }
+
+    public static void traverseTwoTree(Node<Integer> node1 , Node<Integer> node2 ,Node<Integer> node3){
+        if (node1 != null && node2 != null)
+        {
+
+            node3 = new Node<>(node1.getData() + node2.getData());
+            traverseTwoTree(node1.getLeft() , node2.getLeft() , node3.getLeft());
+            traverseTwoTree(node1.getRight() , node2.getRight() , node3.getRight());
+
+        }
+    }
+
+    public static BinarySearchTree convertSortedListToBST(List<Integer> sortedList){
+        Integer head = sortedList.get((sortedList.size()/2));
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.setRoot(new Node<>(head));
+        int i = (sortedList.size()/2) - 1 ;
+        int j = (sortedList.size()/2) + 1 ;
+      while (i >=0)
+      {
+          tree.add(sortedList.get(i));
+          if (j < sortedList.size())
+            tree.add(sortedList.get(j));
+          i-- ;
+          j++ ;
+      }
+        return tree ;
+    }
+
+
 }

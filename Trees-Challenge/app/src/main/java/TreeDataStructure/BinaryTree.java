@@ -58,4 +58,5 @@ public class BinaryTree<T> {
             checkMax(node.getRight());
         }
     }
+
 }
