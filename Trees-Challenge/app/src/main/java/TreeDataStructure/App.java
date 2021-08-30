@@ -58,17 +58,26 @@ public class App {
 //        traverseTwoTree(tree1.getRoot() , tree2.getRoot() , mergedTree.getRoot());
 //        System.out.println(mergedTree);
 
-        List<Integer> sortedList = new ArrayList<>();
-        sortedList.add(1);
-        sortedList.add(2);
-        sortedList.add(3);
-        sortedList.add(4);
-        BinarySearchTree tree = convertSortedListToBST(sortedList) ;
-        System.out.println(tree.getRoot().getData());
-        System.out.println(tree.getRoot().getLeft().getData());
-        System.out.println(tree.getRoot().getRight().getData());
-        System.out.println(tree.getRoot().getLeft().getLeft().getData());
+//        List<Integer> sortedList = new ArrayList<>();
+//        sortedList.add(1);
+//        sortedList.add(2);
+//        sortedList.add(3);
+//        sortedList.add(4);
+//        BinarySearchTree tree = convertSortedListToBST(sortedList) ;
+//        System.out.println(tree.getRoot().getData());
+//        System.out.println(tree.getRoot().getLeft().getData());
+//        System.out.println(tree.getRoot().getRight().getData());
+//        System.out.println(tree.getRoot().getLeft().getLeft().getData());
 
+
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.setRoot(new Node(4));
+        binarySearchTree.add(8);
+        binarySearchTree.add(5);
+        binarySearchTree.add(2);
+        binarySearchTree.add(3);
+        binarySearchTree.add(4);
+        System.out.println(contains(binarySearchTree.getRoot() , 4));
 
     }
 
@@ -187,6 +196,16 @@ public class App {
           j++ ;
       }
         return tree ;
+    }
+
+    public static Boolean contains(Node<Integer> node , Integer num){
+        if (node == null) return false ;
+        if (node.getData().equals(num)) return true ;
+        if (num > node.getData() )
+            return contains(node.getRight() , num) ;
+        else
+            return contains(node.getLeft() , num) ;
+
     }
 
 
