@@ -70,14 +70,25 @@ public class App {
 //        System.out.println(tree.getRoot().getLeft().getLeft().getData());
 
 
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.setRoot(new Node(4));
-        binarySearchTree.add(8);
-        binarySearchTree.add(5);
-        binarySearchTree.add(2);
-        binarySearchTree.add(3);
-        binarySearchTree.add(4);
-        System.out.println(contains(binarySearchTree.getRoot() , 4));
+//        BinarySearchTree binarySearchTree = new BinarySearchTree();
+//        binarySearchTree.setRoot(new Node(4));
+//        binarySearchTree.add(8);
+//        binarySearchTree.add(5);
+//        binarySearchTree.add(2);
+//        binarySearchTree.add(3);
+//        binarySearchTree.add(4);
+//        System.out.println(contains(binarySearchTree.getRoot() , 4));
+
+
+        BinaryTree<Integer> tree1 = new BinaryTree<>();
+        tree1.setRoot(new Node<>(1));
+        tree1.getRoot().setLeft(new Node<>(2));
+        tree1.getRoot().setRight(new Node<>(3));
+        BinaryTree<Integer> tree2 = new BinaryTree<>();
+        tree2.setRoot(new Node<>(2));
+        tree2.getRoot().setLeft(new Node<>(2));
+        tree2.getRoot().setRight(new Node<>(3));
+        System.out.println(checkTrees(tree1.getRoot() , tree2.getRoot()));
 
     }
 
@@ -205,6 +216,22 @@ public class App {
             return contains(node.getRight() , num) ;
         else
             return contains(node.getLeft() , num) ;
+
+    }
+
+    public static Boolean checkTrees(Node<Integer> root1 , Node<Integer> root2){
+        if (root1 != null && root2 != null){
+            if (root1.getData() == root2.getData())
+                return checkTrees(root1.getLeft() , root2.getLeft()) && checkTrees(root1.getRight() , root2.getRight()) ;
+            else
+                return false ;
+            
+        } else if (root1 == null && root2==null)
+            return true ;
+        else
+            return false ;
+
+
 
     }
 
